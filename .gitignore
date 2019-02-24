@@ -1,0 +1,17 @@
+*.aux
+*.bbl
+*.bib.bak
+*.bib.sav
+*.blg
+*.brf
+*.glg
+*.glo
+*.gls
+*.ist
+*.log
+*.synctex.gz
+*.xdy
+*.toc
+*.sh
+*.out
+*.end
