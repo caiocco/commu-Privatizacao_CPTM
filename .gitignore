@@ -15,3 +15,9 @@
 *.sh
 *.out
 *.end
+*.bcf
+*.txsprofile
+*.ilg
+*.ind
+*.ptc
+*.run.xml
