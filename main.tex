@@ -5,6 +5,7 @@
 %
 % This template has been downloaded from:
 % http://www.LaTeXTemplates.com
+% https://pt.overleaf.com/latex/templates/the-legrand-orange-book-template-english/jtctyfmnpppc
 %
 % Original author:
 % Mathias Legrand (legrand.mathias@gmail.com) with modifications by:
@@ -60,10 +61,10 @@
 \coordinate [below=12cm] (midpoint) at (current page.north);
 \node at (current page.north west)
 {\begin{tikzpicture}[remember picture,overlay]
-\node[anchor=north west,inner sep=0pt] at (0,0) {\includegraphics[width=\paperwidth]{background}}; % Background image
-\draw[anchor=north] (midpoint) node [fill=ocre!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering The Search for a Title\\[15pt] % Book title
-{\Large A Profound Subtitle}\\[20pt] % Subtitle
-{\huge Dr. John Smith}}}; % Author name
+\node[anchor=north west,inner sep=0pt] at (0,0) {\includegraphics[width=\paperwidth]{2016-10-21_mdc_partida_l11}}; % Background image
+\draw[anchor=north] (midpoint) node [fill=black!90!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering \textcolor{white}{Querem privatizar a CPTM. E agora?} \\[15pt] % Book title
+{\Large \textcolor{white}{Um arsenal para discussão de problemas e parcerias público-privadas}}\\[20pt] % Subtitle
+{\huge \textcolor{white}{Coletivo Metropolitano de Mobilidade Urbana}}}}; % Author name
 \end{tikzpicture}};
 \end{tikzpicture}
 \vfill
@@ -77,23 +78,23 @@
 ~\vfill
 \thispagestyle{empty}
 
-\noindent Copyright \copyright\ 2013 John Smith\\ % Copyright notice
+\noindent Copyright \copyright\ 2019 Coletivo Metropolitano de Mobilidade Urbana \\ % Copyright notice
 
-\noindent \textsc{Published by Publisher}\\ % Publisher
+\noindent \textsc{Publicação independente}\\ % Publisher
 
-\noindent \textsc{book-website.com}\\ % URL
+\noindent \textsc{medium.com/@commu}\\ %  URL
 
 \noindent Licensed under the Creative Commons Attribution-NonCommercial 3.0 Unported License (the ``License''). You may not use this file except in compliance with the License. You may obtain a copy of the License at \url{http://creativecommons.org/licenses/by-nc/3.0}. Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \textsc{``as is'' basis, without warranties or conditions of any kind}, either express or implied. See the License for the specific language governing permissions and limitations under the License.\\ % License information
 
-\noindent \textit{First printing, March 2013} % Printing/edition date
+\noindent \textit{Primeira impressão. Março de 2019} % Impressão/data da edição
 
 %----------------------------------------------------------------------------------------
-% 	TABLE OF CONTENTS
+% 	SUMÁRIO/CONTEÚDO
 %----------------------------------------------------------------------------------------
 
 %\usechapterimagefalse % If you don't want to include a chapter image, use this to toggle images off - it can be enabled later with \usechapterimagetrue
 
-\chapterimage{chapter_head_1.pdf} % Table of contents heading image
+\chapterimage{2012-12-21_vol_passarela_l9} % Table of contents heading image
 
 \pagestyle{empty} % No headers
 
@@ -103,254 +104,219 @@
 
 \pagestyle{fancy} % Print headers again
 
-%----------------------------------------------------------------------------------------
-% 	PART
-%----------------------------------------------------------------------------------------
-
-\part{Part One}
 
 %----------------------------------------------------------------------------------------
-% 	CHAPTER 1
+% 	PREFÁCIO
 %----------------------------------------------------------------------------------------
 
-\chapterimage{chapter_head_2.pdf} % Chapter heading image
+\chapterimage{2016-04-13_bru_embarque_l8} % Imagem do cabeçalho do capítulo
+\chapter*{Apresentação}\index{Apresentação}
 
-\chapter{Text Chapter}
+\section*{Prefácio}
 
-\section{Paragraphs of Text}\index{Paragraphs of Text}
+\lipsum[1-2]
 
-\lipsum[1-7] % Dummy text
+\section*{Convenções}
 
-%------------------------------------------------
+Para facilitar a compreensão, algumas convenções são adotadas ao longo do livro:
 
-\section{Citation}\index{Citation}
+\begin{info}
+	Utilizado para fornecimento de informações adicionais, como dados de autorais.
+\end{info}
 
-This statement requires citation \cite{book_key}; this one is more specific \cite[122]{article_key}.
-
-%------------------------------------------------
-
-\section{Lists}\index{Lists}
-
-Lists are useful to present information in a concise and/or ordered way\footnote{Footnote example...}.
-
-\subsection{Numbered List}\index{Lists!Numbered List}
-
-\begin{enumerate}
-\item The first item
-\item The second item
-\item The third item
-\end{enumerate}
-
-\subsection{Bullet Points}\index{Lists!Bullet Points}
-
-\begin{itemize}
-\item The first item
-\item The second item
-\item The third item
-\end{itemize}
-
-\subsection{Descriptions and Definitions}\index{Lists!Descriptions and Definitions}
-
-\begin{description}
-\item[Name] Description
-\item[Word] Definition
-\item[Comment] Elaboration
-\end{description}
+\begin{obs}
+	Observação: utilizado para salientar detalhes observados de forma particular pelo autor.
+\end{obs}
 
 %----------------------------------------------------------------------------------------
-% 	CHAPTER 2
+% 	PARTE 1
 %----------------------------------------------------------------------------------------
 
-\chapter{In-text Elements}
+\part{Contextualização}\index{Contextualização}
 
-\section{Theorems}\index{Theorems}
+\chapterimage{2018-06-20_fmo_9500_l7} % Imagem do cabeçalho do capítulo
+\chapter{A estatal}
 
-This is an example of theorems.
+\section{Surgimento da CPTM}
 
-\subsection{Several equations}\index{Theorems!Several Equations}
-This is a theorem consisting of several equations.
+\lipsum[3-4]
 
-\begin{theorem}[Name of the theorem]
-In $E=\mathbb{R}^n$ all norms are equivalent. It has the properties:
-\begin{align}
-& \big| ||\mathbf{x}|| - ||\mathbf{y}|| \big|\leq || \mathbf{x}- \mathbf{y}||\\
-&  ||\sum_{i=1}^n\mathbf{x}_i||\leq \sum_{i=1}^n||\mathbf{x}_i||\quad\text{where $n$ is a finite integer}
-\end{align}
-\end{theorem}
+\section{Evolução da demanda de passageiros}
 
-\subsection{Single Line}\index{Theorems!Single Line}
-This is a theorem consisting of just one line.
+\lipsum[3-4]
 
-\begin{theorem}
-A set $\mathcal{D}(G)$ in dense in $L^2(G)$, $|\cdot|_0$. 
-\end{theorem}
+\section{Parceiras público-privadas em andamento}
 
-%------------------------------------------------
+\lipsum[3-4]
 
-\section{Definitions}\index{Definitions}
+\section{Parceiras público-privadas fracassadas}
 
-This is an example of a definition. A definition could be mathematical or it could define a concept.
+\lipsum[3-4]
 
-\begin{definition}[Definition name]
-Given a vector space $E$, a norm on $E$ is an application, denoted $||\cdot||$, $E$ in $\mathbb{R}^+=[0,+\infty[$ such that:
-\begin{align}
-& ||\mathbf{x}||=0\ \Rightarrow\ \mathbf{x}=\mathbf{0}\\
-& ||\lambda \mathbf{x}||=|\lambda|\cdot ||\mathbf{x}||\\
-& ||\mathbf{x}+\mathbf{y}||\leq ||\mathbf{x}||+||\mathbf{y}||
-\end{align}
-\end{definition}
+\chapterimage{2019-02-09_est_passarela_l11} % Imagem do cabeçalho do capítulo
+\chapter{O território atendido}
 
-%------------------------------------------------
+\section{Os municípios}
 
-\section{Notations}\index{Notations}
+\lipsum[3-4]
 
-\begin{notation}
-Given an open subset $G$ of $\mathbb{R}^n$, the set of functions $\varphi$ are:
-\begin{enumerate}
-\item Bounded support $G$;
-\item Infinitely differentiable;
-\end{enumerate}
-a vector space is denoted by $\mathcal{D}(G)$. 
-\end{notation}
+\section{Potencialidades}
 
-%------------------------------------------------
+\lipsum[3-4]
 
-\section{Remarks}\index{Remarks}
+\section{Eixos de desenvolvimento}
 
-This is an example of a remark.
+\lipsum[3-4]
 
-\begin{remark}
-The concepts presented here are now in conventional employment in mathematics. Vector spaces are taken over the field $\mathbb{K}=\mathbb{R}$, however, established properties are easily extended to $\mathbb{K}=\mathbb{C}$.
-\end{remark}
+\section{Habitação social em complexos de habitação intensiva}
 
-%------------------------------------------------
-
-\section{Corollaries}\index{Corollaries}
-
-This is an example of a corollary.
-
-\begin{corollary}[Corollary name]
-The concepts presented here are now in conventional employment in mathematics. Vector spaces are taken over the field $\mathbb{K}=\mathbb{R}$, however, established properties are easily extended to $\mathbb{K}=\mathbb{C}$.
-\end{corollary}
-
-%------------------------------------------------
-
-\section{Propositions}\index{Propositions}
-
-This is an example of propositions.
-
-\subsection{Several equations}\index{Propositions!Several Equations}
-
-\begin{proposition}[Proposition name]
-It has the properties:
-\begin{align}
-& \big| ||\mathbf{x}|| - ||\mathbf{y}|| \big|\leq || \mathbf{x}- \mathbf{y}||\\
-&  ||\sum_{i=1}^n\mathbf{x}_i||\leq \sum_{i=1}^n||\mathbf{x}_i||\quad\text{where $n$ is a finite integer}
-\end{align}
-\end{proposition}
-
-\subsection{Single Line}\index{Propositions!Single Line}
-
-\begin{proposition} 
-Let $f,g\in L^2(G)$; if $\forall \varphi\in\mathcal{D}(G)$, $(f,\varphi)_0=(g,\varphi)_0$ then $f = g$. 
-\end{proposition}
-
-%------------------------------------------------
-
-\section{Examples}\index{Examples}
-
-This is an example of examples.
-
-\subsection{Equation and Text}\index{Examples!Equation and Text}
-
-\begin{example}
-Let $G=\{x\in\mathbb{R}^2:|x|<3\}$ and denoted by: $x^0=(1,1)$; consider the function:
-\begin{equation}
-f(x)=\left\{\begin{aligned} & \mathrm{e}^{|x|} & & \text{si $|x-x^0|\leq 1/2$}\\
-& 0 & & \text{si $|x-x^0|> 1/2$}\end{aligned}\right.
-\end{equation}
-The function $f$ has bounded support, we can take $A=\{x\in\mathbb{R}^2:|x-x^0|\leq 1/2+\epsilon\}$ for all $\epsilon\in\intoo{0}{5/2-\sqrt{2}}$.
-\end{example}
-
-\subsection{Paragraph of Text}\index{Examples!Paragraph of Text}
-
-\begin{example}[Example name]
-\lipsum[2]
-\end{example}
-
-%------------------------------------------------
-
-\section{Exercises}\index{Exercises}
-
-This is an example of an exercise.
-
-\begin{exercise}
-This is a good place to ask a question to test learning progress or further cement ideas into students' minds.
-\end{exercise}
-
-%------------------------------------------------
-
-\section{Problems}\index{Problems}
-
-\begin{problem}
-What is the average airspeed velocity of an unladen swallow?
-\end{problem}
-
-%------------------------------------------------
-
-\section{Vocabulary}\index{Vocabulary}
-
-Define a word to improve a students' vocabulary.
-
-\begin{vocabulary}[Word]
-Definition of word.
-\end{vocabulary}
+\lipsum[3-4]
 
 %----------------------------------------------------------------------------------------
-% 	PART
+% 	PARTE 2
 %----------------------------------------------------------------------------------------
 
-\part{Part Two}
+\part{Análise}
 
-%----------------------------------------------------------------------------------------
-% 	CHAPTER 3
-%----------------------------------------------------------------------------------------
+\chapterimage{2019-02-09_ego_sinal68} % Imagem do cabeçalho do capítulo
+\chapter{Apropriando-se da infraestrutura}
 
-\chapterimage{chapter_head_1.pdf} % Chapter heading image
+\section{Estação Luz}
 
-\chapter{Presenting Information}
+Imponente por fora, a estação vive hoje cenas de saturação, que muitas vezes levam a comportamentos no mínimo duvidosos (para não dizer arriscados) nos horários de pico. A estrutura, de arquitetura inglesa, revela uma rotina apressada, que por vezes sobrepõe-se a razão. A Estação da Luz merece viver melhores dias e, com ela, todos os passageiros e passageiras.
 
-\section{Table}\index{Table}
+\subsection{Projeto Integração Centro}
 
-\begin{table}[h]
-\centering
-\begin{tabular}{l l l}
-\toprule
-\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
-\midrule
-Treatment 1 & 0.0003262 & 0.562 \\
-Treatment 2 & 0.0015681 & 0.910 \\
-Treatment 3 & 0.0009271 & 0.296 \\
-\bottomrule
-\end{tabular}
-\caption{Table caption}
-\end{table}
+Oficialmente, a CPTM informa como data de inauguração a data de 30/11/2004, a informação está contida na área de linhas do site\footnote{\url{https://www.cptm.sp.gov.br/sua-viagem/Pages/Linhas.aspx}}. O ano de 2004 está relacionado com o fracassado Projeto Integração Centro, uma tentativa de conexão entre as seis linhas da CPTM e o eixo central (Brás-Luz-Barra Funda), que na altura acabou subestimando a demanda dos subúrbios e o próprio papel do sistema de trilhos, que passava a ganhar contornos de malha integrada, algo que até então ainda não era tão enfatizado.
 
-%------------------------------------------------
-
-\section{Figure}\index{Figure}
-
-\begin{figure}[h]
-\centering\includegraphics[scale=0.5]{placeholder}
-\caption{Figure caption}
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=\linewidth]{diagrama_integracao_centro}
+	\caption[Mapa do Integração Centro]{Antigo mapa do transporte metropolitano, com o Integração Centro em destaque}
+	\label{fig:diag_ic}
 \end{figure}
 
+Pagamos o preço pelas limitações oriundas do Integração Centro até os dias atuais. Corredores e acessos foram dimensionados para um universo em que o intervalo era de 10 minutos e a demanda das linhas da CPTM não chegava nem perto dos cerca de 3 milhões atuais. Projetos ruins no passado significam sofrimento por até uma década ou mais.
+
+Mesmo com as limitações, é preciso mencionar que o projeto foi o responsável pelo corredor de integração entre a CPTM e o Metrô, indispensável nos dias atuais. Na época a estação também foi reformada e ao passar a contar com acessos subterrâneos, teve a plataforma central remodelada e ganhou novos sanitários.
+
+\subsection{Transformações recentes}
+
+Nos últimos 15 anos, a estação sofreu mudanças quanto às linhas disponíveis para embarque a partir dela. Abaixo podemos conferir quais linhas operam atualmente.
+
+%TODO inserir tabela
+
+Com a chegada da Linha 4-Amarela, o corredor de integração foi modificado, passando a contar com um novo acesso na lateral. Uma espécie de “desvio” foi feito na tentativa de organizar o fluxo nos horários de pico e a impressão de “puxadão” é inevitável. A integração, já saturada, ganhou ares de improviso.
+
+Outro aspecto notável é que depois da chegada da Linha 4, a Linha 10 foi retirada da estação, passando a fazer terminal na Estação Brás. A operação das linhas 7 e 10 sempre foi ruim e, na verdade, a gare histórica de 1901 não foi pensada como terminal.
+
+Simplesmente faltava uma plataforma adicional para viabilizar a operação que a CPTM tentava fazer. Como a operação era feita numa única plataforma para as linhas 7 e 10, chegou-se ao limite de maneira relativamente rápida e os seguintes fatores inviabilizadores surgiram:
+
+\begin{itemize}
+	\item Demanda crescente nas linhas da CPTM;
+	\item Dificuldade de esvaziamento da plataforma central;
+	\item Redução de intervalos nas linhas da CPTM;
+	\item Chegada da Linha 4.
+\end{itemize}
+
+A CPTM decidiu, mesmo após realização de obras na via permanente, manter a Linha 10 no Brás. A decisão revoltou alguns passageiros e contrariou o informativo impresso que chegou a ser distribuído na época, como podemos ver na \autoref{fig:l10_luz}.
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=\linewidth]{informativo_l10_luz}
+	\caption[Informativo agosto/2011]{Informativo distribuído em agosto de 2011}
+	\label{fig:l10_luz}
+\end{figure}
+
+Se observarmos os dados de demanda atuais fornecidos pela CPTM, temos o seguinte quadro, no qual a Linha 10 é a de menor demanda em média por dia útil.
+
+%TODO inserir gráfico atualizado
+
+\subsection{Projetos e mais projetos}
+
+A mudança realizada na Linha 10, a despeito das obras e das promessas feitas aos usuários, parece ter sido uma decisão fruto da incapacidade de elaborar e cumprir bons planos, olhando para o caráter estruturante da malha. Verdade seja dita: a CPTM tem alguns projetos para o futuro, mas patina para tirá-los do papel. Vejamos\dots
+
+\begin{itemize}
+	\item Expandir a Linha 11 até a Estação Palmeiras-Barra Funda;
+	\item Criar uma Linha 10 expressa (Expresso ABC), com terminal na Estação Palmeiras-Barra Funda;
+	\item Construir uma nova estação de integração na região central (atualmente chamada de Bom Retiro, no local em que está a Favela do Moinho);
+	\item Desativar a Estação Júlio Prestes (polêmico, ora dizem que irão desativar, ora voltam atrás).
+\end{itemize}
+
+%TODO foto do saguão da Luz
+
+Para a expansão da Linha 11, obras foram realizadas entre as estações Luz e Palmeiras-Barra Funda, além disso, foram adquiridos 9 novos trens, cuja série atribuída é 9000 e cujo último trem (que na realidade foi o primeiro da série, o mais problemático) foi entregue recentemente pelo governador Geraldo Alckmin\footnote{\url{http://cptm.sp.gov.br/webnoticias/one_news.asp?IDNews=10148}}.
+
+Sobre a futura Estação Bom Retiro, esta parece ser uma espécie de paliativo, fortalecido pelo fracasso da operação Nova Luz da gestão Kassab (prefeitura da capital). Previa-se para a região uma estação denominada Nova Luz, com plataformas subterrâneas, que não só serviria para desafogar a gare centenária, como também estaria ligada a um projeto ambicioso, visando tornar subterrâneos os trilhos da CPTM entre as regiões do Brás e da Lapa, eliminando gargalos históricos e estimulando uma ocupação melhor de áreas hoje ocupadas por galpões subutilizados.
+
+Já com relação à Estação Júlio Prestes, em 07/02/2012 o jornal Estadão publicava matéria intitulada ``Superlotada, Estação Luz vai ter nova passarela e mais saídas de passageiros'' \footnote{\url{http://sao-paulo.estadao.com.br/noticias/geral,superlotada-estacao-luz-vai-ter-nova-passarela-e-mais-saidas-de-passageiros,832739}}, nela a intenção de integração outrora mencionada é revelada no último parágrafo:
+
+\begin{citacao}
+	A terceira mudança (tida como mais “embrionária” pelo governo do Estado) será a construção de um túnel entre as Estações Luz e Júlio Prestes. As paradas estão a cerca de 400 metros uma da outra, mas não têm conexão. A ideia é fazer uma passagem com esteiras rolantes, que poderiam ser usadas especialmente por pessoas que queiram ir à Sala São Paulo (na Júlio Prestes) e ao Museu da Língua Portuguesa (na Luz).
+\end{citacao}
+
+Como falamos no início, a Estação Luz sofreu diversas mudanças, mas infelizmente a vizinha Júlio Prestes não teve a mesma sorte e uma grande oportunidade foi desperdiçada, uma vez que não só a Estação Júlio Prestes continuou sem grandes modificações (até as placas internas são as mesmas da época da Fepasa), como também está isolada do restante do sistema de trilhos, uma vez que apenas a Linha 8-Diamante (Júlio Prestes-Itapevi-Amador Bueno) dá acesso à estação. Mais de 10 anos após o Projeto Integração Centro, ainda não há qualquer definição, a empresa parece ter engavetado de forma mesquinha e egoísta o projeto de enterramento dos trilhos, ao passo que também demonstra indecisão: não sabe se investe ou não na Estação Júlio Prestes, uma vez que no contexto de uma nova gare para a Estação Luz, a antiga estação da Sorocabana seria transformada em um centro de convenções.
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=\linewidth]{slides_nova_luz}
+	\caption[Nova Luz conforme slides da CPTM para a AEAMESP]{Slides 112, 114, 116 e 116 de uma apresentação da CPTM realizada na AEAMESP\footnote{\url{http://web.archive.org/web/20101227091520/http://biblioteca.aeamesp.org.br/smns/16smtf100914pl102.pdf}}. Aqui podemos ter uma ideia de como seria a Nova Luz (Gare Oeste da Estação Luz)}
+	\label{fig:slides_nova_luz}
+\end{figure}
+
+Pouco transparente, a CPTM não precisa datas para seus projetos, não publica cronogramas e não conduz pesquisas com usuários, também parece avessa à participação popular.
+
+Comentamos sobre o projeto de enterramento dos trilhos feito pela Fupam em outro texto. Vale a pena conferir o vídeo do projeto, que permite ter uma visão rápida sobre a proposta:
+
+%TODO ver o que fazer com o texto sobre os 130 km dentro da capital
+
+\subsubsection{O pico}
+
+O horário de pico na Estação Luz é ruim, ele se estende por horas, sendo possível evidenciar desconforto mesmo por volta das 19h. É possível afirmar que o pico já está consolidado por volta das 17h.
+
+Podemos resumir os problemas da estação como sendo:
+
+\begin{itemize}
+	\item Embarque perigoso, uma vez que as plataformas laterais têm dimensão problemática, limitando a instalação de organizadores de fluxo. Uma situação ideal poderia implicar na instalação de portas de plataforma;
+	\item Escadas insuficientes na plataforma central, tornando o desembarque no pico da manhã arriscado, uma vez que a plataforma não esvazia devido ao baixo intervalo praticado hoje (na Linha 11, beira os 4 minutos em média). Usuários não respeitam a faixa amarela e se arriscam a medida que os trens deixam a plataforma;
+	\item Corredor de integração com dimensões reduzidas e com organização deficiente na chegada ao saguão da CPTM, com conflitos entre quem se dirige ao Metrô no contra-fluxo
+	\item Nos picos a transferência entre as linhas 7-Rubi e 11-Coral pode ser desafiadora, uma vez que a maioria se dirige às linhas do Metrô;
+	\item Buscando otimizar o fluxo do corredor de integração a CPTM fechou todas as lojas existentes, mas não liberou o espaço, reforçando o fracasso do projeto original
+	\item O balcão de informações fica numa área ruim, muito próximo do acesso ao corredor de integração;
+	\item A área livre da estação funciona como ponto de prostituição e a CPTM demonstra conivência, uma vez que não coíbe a prática mesmo em plena luz do dia.
+\end{itemize}
+
+No horário de pico filas se formam nas escadas de acesso às plataformas, principalmente na Linha 11. Como explicado, a plataforma tem dimensões limitadas os acessos a ela foram concebidos num cenário de demanda muito diferente do atual. Mesmo com o desligamento das escadas o acúmulo é inevitável.
+
+É evidente que a CPTM não sabe mais o que fazer. Se ela tentar limitar o fluxo no corredor, ponto crítico, superlota a Estação Luz da Linha 1-Azul do Metrô. É crucial que a empresa pense numa gare adicional ou pelo menos um novo projeto integrador, contemplando a Estação Júlio Prestes. É o preço dos equívocos feitos anteriormente, que só aumenta com a manutenção do cenário.
+
+\subsubsection{Conclusão}
+
+A Estação Luz da CPTM é belíssima, um marco no Centro de São Paulo, que impressiona não só pela beleza de sua arquitetura centenária, mas também pela versatilidade proporcionada pelas conexões ali existentes. O problema é que o projeto que levou à sua restauração e modernização foi feito de maneira tacanha.
+
+O plano diretor de inserção urbana da rede da CPTM, feito pela Fupam, bem como o projeto de enterramento, aparentemente foram demonstrações de que a estatal estava entrando nos trilhos, até que algo aconteceu e ela descarrilou. Kassab enfrentou dificuldades com o Nova Luz (nada surpreendentes pela forma como conduziu o processo), mas as dificuldades com o Nova Luz não poderiam, devido à questão dos CEPACs (certificados de potencial adicional de construção, que permitiram ao município angariar fundos para colocar no projeto de enterramento), motivar o engavetamento da parte que cabia à CPTM. É utópico, na conjuntura atual, esperar que a capital custeie fortemente o enterramento de uma infraestrutura que não pertence a ela, principalmente quando houve, para variar, passividade do Governo do Estado, que esperou cerca de 10 anos para pensar em algo, se mostrando incapaz de levar a empreitada adiante.
+
+A superlotação e os gargalos na Estação da Luz \textemdash e também no eixo Brás-Lapa \textemdash só têm se agravado com a postura do governo estadual e da Secretaria dos Transportes Metropolitanos.
+
+\begin{info}
+	\textbf{Autor}: Caio César Carvalho Ortega \\
+	\textbf{Originalmente publicado em:} 01/03/2015 \\
+	\textbf{Endereço do original:} \url{https://medium.com/trens-metropolitanos/mar%C3%A7o-e-a-esta%C3%A7%C3%A3o-luz-m%C3%AAs-de-um-anivers%C3%A1rio-ingl%C3%B3rio-1f23e0adc672}
+\end{info}
+
+\section{Algum outro tema}
+
+\begin{obs}
+	Teste
+\end{obs}
+
 %----------------------------------------------------------------------------------------
-% 	BIBLIOGRAPHY
+% 	BIBLIOGRAFIA
 %----------------------------------------------------------------------------------------
 
+\chapterimage{2019-02-09_tat_plataforma_l12} % Imagem do cabeçalho do capítulo
 \chapter*{Bibliografia}
-\addcontentsline{toc}{chapter}{\textcolor{ocre}{Bibliografia}}
+\addcontentsline{toc}{chapter}{\textcolor{red}{Bibliografia}}
 \section*{Livros}
 \addcontentsline{toc}{section}{Livros}
 \printbibliography[heading=bibempty,type=book]
@@ -359,13 +325,14 @@ Treatment 3 & 0.0009271 & 0.296 \\
 \printbibliography[heading=bibempty,type=article]
 
 %----------------------------------------------------------------------------------------
-% 	INDEX
+% 	ÍNDICE
 %----------------------------------------------------------------------------------------
 
 \cleardoublepage
 \phantomsection
 \setlength{\columnsep}{0.75cm}
-\addcontentsline{toc}{chapter}{\textcolor{ocre}{Index}}
+\chapterimage{2018-04-06_psa_arte_l10} % Imagem do cabeçalho do capítulo
+\addcontentsline{toc}{chapter}{\textcolor{red}{Index}}
 \printindex
 
 %----------------------------------------------------------------------------------------
