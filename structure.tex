@@ -24,6 +24,11 @@
 \usepackage{graphicx} % Required for including pictures
 \graphicspath{{img/}} % Specifies the directory where pictures are stored
 
+\usepackage{pgfplots} % Plotagem
+\pgfplotsset{compat=1.13}
+
+\usepackage{wrapfig}
+
 \usepackage{lipsum} % Inserts dummy text
 
 \usepackage{tikz} % Required for drawing custom shapes
@@ -37,6 +42,13 @@
 
 \usepackage{xcolor} % Required for specifying colors by name
 \definecolor{ocre}{RGB}{243,102,25} % Define the orange color used for highlighting throughout the book
+
+\usepackage{lscape}
+
+\usepackage{longtable} % Tabelas longas
+% Caio - corrigindo espaçamento conforme http://tex.stackexchange.com/questions/5683/how-to-remove-top-and-bottom-whitespace-of-longtable
+\setlength{\LTpost}{0pt}
+\setlength{\LTpre}{0pt}
 
 %----------------------------------------------------------------------------------------
 % 	FONTS
@@ -55,8 +67,8 @@
 %----------------------------------------------------------------------------------------
 
 \usepackage{csquotes}
-\usepackage[style=abnt,citestyle=numeric,sorting=nyt,sortcites=true,autopunct=true,autolang=hyphen,hyperref=true,abbreviate=false,backref=true,backend=biber,defernumbers=true]{biblatex}
-\addbibresource{bibliography.bib} % BibTeX bibliography file
+\usepackage[style=abnt,citestyle=authoryear,sorting=nyt,sortcites=true,autopunct=true,autolang=hyphen,hyperref=true,abbreviate=false,backref=true,backend=biber,defernumbers=true]{biblatex}
+\addbibresource{fontes.bib} % Arquivo BibTeX com a bibliografia
 \defbibheading{bibempty}{}
 
 \usepackage{calc} % For simpler calculation - used for spacing the index letter headings correctly

@@ -49,6 +49,82 @@
 
 \newcommand{\infocaio}[2]{\textbf{Autor:} Caio C\'{e}sar C. Ortega \\ \textbf{Biografia:} aluno da Universidade Federal do ABC, cursa os bacharelados em Ci\^{e}ncias e Humanidades e em Planejamento Territorial. Morador da Zona Leste da capital. Possui cerca de dez anos de experi\^{e}ncia profissional em \textit{call} e \textit{contact center}, principalmente nas \'{a}reas de atendimento, planejamento e MIS. Ajudou a idealizar e iniciar o COMMU em 2014 \\ \textbf{Originalmente publicado em:} {#1} \\ \textbf{Endere\c{c}o do original:} \url{{#2}}}
 
+\usepackage{glossaries}
+\makeglossaries
+
+% \newglossaryentry{ex}{name={sample},description={an example}}
+\newglossaryentry{abl}{
+	name={ABL},
+	description={\'{A}rea Bruta Loc\'{a}vel}
+}
+
+\newglossaryentry{auj}{
+	name={AUJ},
+	description={Aglomera\c{c}\~{a}o Urbana de Jundia\'{\i}}
+}
+
+\newglossaryentry{bbtt}{
+	name={Benfica BBTT},
+	description={Benfica Barueri Transporte e Turismo Ltda}
+}
+
+\newglossaryentry{cptm}{
+	name={CPTM},
+	description={Companhia Paulista de Trens Metropolitanos}
+}
+
+\newglossaryentry{cmsp}{
+	name={CMSP},
+	description={Companhia do Metropolitano de S\~{a}o Paulo}
+}
+
+\newglossaryentry{ett}{
+	name={ETT},
+	description={Empresa de Transportes e Turismo Carapicu\'{\i}ba}
+}
+
+\newglossaryentry{emtu}{
+	name={EMTU},
+	description={Empresa Metropolitana de Transportes Urbanos de S\~{a}o Paulo S.A}
+}
+
+\newglossaryentry{emplasa}{
+	name={Emplasa},
+	description={Empresa Paulista de Planejamento Metropolitano S/A}
+}
+
+\newglossaryentry{luos}{
+	name={LUOS},
+	description={Lei de Uso de Ocupação do Solo}
+}
+
+\newglossaryentry{mdu}{
+	name={MDU},
+	description={M\'{e}dia por Dia \'{U}til}
+}
+
+\newglossaryentry{ouc}{
+	name={OUC},
+	description={Opera\c{c}\~{a}o Urbana Consorciada}
+}
+
+
+\newglossaryentry{pl}{
+	name={PL},
+	description={Projeto de Lei}
+}
+
+
+\newglossaryentry{rmsp}{
+	name={RMSP},
+	description={Regi\~{a}o Metropolitana de S\~{a}o Paulo}
+}
+
+\newglossaryentry{smdu}{
+	name={SMDU},
+	description={Secretaria Municipal de Desenvolvimento Urbano da Prefeitura de S\~{a}o Paulo}
+}
+
 %----------------------------------------------------------------------------------------
 
 \input{structure} % Insert the commands.tex file which contains the majority of the structure behind the template
@@ -128,10 +204,12 @@
 
 \section*{Convenções}
 
-Para facilitar a compreensão, algumas convenções são adotadas ao longo do livro:
+Convenciona-se que toda a malha da \gls{cptm} também é um serviço de alta capacidade, definido por \cite[pág. 32]{Isoda} como: uma rede segregada e de linhas exclusivas e; conforme \cite[pág. 51]{Isoda}, ``sistemas  de  alta  capacidade  operam  sempre  com  veículos  de  grande porte \textemdash\ composições de 4 a 12 carros, de 80 a 220m de comprimento. Quanto  maior  o  veículo,  mais  pessoas  transportadas  por  vez,  maior capacidade.  Mas  quanto  maior,  mais  pesado,  maior  a  inércia,  o  que exige  mais  potencia  dos  motores,  além  de  maior  dificuldade  de aceleração e frenagem, reforçando a necessidade da segregação''.
+
+Convenciona-se ainda a adoção de marcações especiais ao longo do livro, que indicam tipos específicos de informações:
 
 \begin{info}
-	Utilizado para fornecimento de informações adicionais, como dados de autorais.
+	Utilizado para fornecimento de informações adicionais, como dados autorais.
 \end{info}
 
 \begin{obs}
@@ -149,11 +227,124 @@ Para facilitar a compreensão, algumas convenções são adotadas ao longo do li
 
 \section{Surgimento da CPTM}
 
-\lipsum[3-4]
+A \glsdesc*{cptm} é uma empresa estatal de economia mista, ligada à Secretaria dos Transportes Metropolitanos do Governo de Estado de São Paulo, criada em 28 de maio de 1992 por força da Lei Estadual nº 7.861, conforme \cite{sitecptm1}, podendo seu papel pode ser entendido no artigo 4º da mesma lei:
+	
+\begin{citacao}
+	Artigo 4º -- A \gls{cptm} terá por objeto:\\
+	I -- planejamento, estudo, projeto, construção, implantação, exploração e manutenção das obras e serviços de transporte de passageiros, sobre trilhos ou guiados, nas entidades regionais do Estado de São Paulo;\\
+	II -- execução das obras e dos serviços complementares ou correlatos, necessários à integração do sistema de transporte por ela operado ao complexo urbanístico das cidades servidas pelo sistema; \\
+	III --  operação de conexões intermodais de transporte de passageiros, no sistema por ela explorado, como terminais, estacionamentos e outras correlatas;\\
+	IV -- prestação a terceiros de serviços de transporte de cargas, ou de passageiros, de passagem pelo território por ela servido;\\
+	V -- comercialização de marca, patente, nome e insígnia; comercialização de áreas e espaços para propaganda; prestação de serviços complementares de suporte ao usuário, por si ou por meio de terceiros, com ou sem cessão de uso predial;\\
+	VI -- comercialização de tecnologia, direta ou indiretamente, em sociedades ou em consórcios; prestação de serviços de consultoria, gerenciamento e apoio técnico; prestação de serviços de operação e manutenção de equipamentos; construção e implantação de sistemas de transporte e terminais de passageiros, no País ou no exterior; e\\
+	VII -- edição de jornais, revistas e outras publicações de caráter técnico ou comercial.\cite{lei7861}
+\end{citacao}
+	
+Segundo \cite[p. 236]{Stefani}, ``a formação da \gls{cptm} tornou-se oficial após aprovação na Assembléia Geral da	Constituição, realizada em 02.07.1993, tendo como acionistas a Fepasa e a Companhia Metropolitana de Transportes Coletivos – CMTC''
 
-\section{Evolução da demanda de passageiros}
+Ainda, \cite[p. 42]{Isoda} discorre sobre a questão dos critérios para contagem da quilometragem da rede, sendo oportuno observar o comparativo feito por ele na \autoref{tab:isoda_km}:
 
-\lipsum[3-4]
+\begin{citacao}
+	Na tabela temos algumas redes de metrô comparadas com a rede de alta capacidade de São Paulo. Percebe-se um limite por volta dos 10 km/hab. Na faixa inferior se encontram os casos latinoamericanos, com exceção de Santiago, com 15 km/hab. A rede de metrô de São Paulo possui o menor índice, num empate técnico com Buenos Aires. Se somada à rede da \gls{cptm}, passa a ter uma proporção similar à de Santiago, e acima da Cidade do México. Podemos ver também que apesar de possuírem redes de metrô de extensão similar, Milão e São Paulo possuem populações completamente distintas, resultando em índices drasticamente diferentes.
+\end{citacao}
+
+\begin{table}[h]
+	\caption{Quilometragem de rede por habitante. Fonte: \cite[p. 58]{Isoda}}
+	\includegraphics[keepaspectratio,width=\textwidth]{img_isoda_km_rede.png}
+	\label{tab:isoda_km}
+\end{table}
+
+Assim como a criação da companhia, a operação de seis das sete linhas, nas quais todas exceto a 13-Jade são fruto de herança de estatais que pré-dataram a criação da {\glsdesc*{cptm}}, tem seu amparo por meio da Lei 7.861 de 1992, que retomo com o Art. 12:
+
+\begin{citacao}
+	Artigo 12 --- A CPTM deverá assumir os sistemas de trens urbanos da Região Metropolitana de São Paulo, operados pela Companhia Brasileira de Trens Urbanos - CBTU e pela Ferrovia Paulista S/A - FEPASA, de forma a assegurar a continuidade e a melhoria dos serviços, para isso podendo efetuar os necessários acordos operacionais.\\
+	Parágrafo único --- Para o cumprimento do disposto neste artigo, a CPTM poderá celebrar contratos de prestação de serviços, gerenciamento de bens, ou quaisquer serviços de transporte de passageiros sobre trilhos ou guiados, de outras empresas ligadas ao sistema de transporte de passageiros na Região Metropolitana de São Paulo.\cite{lei7861}
+\end{citacao}
+
+Como explica \cite[pág. 30]{Isoda} em relação às redes conceituadas como metrô e surgidas em meados do século XIX, estas malhas ``Não se diferenciavam tecnológica e operacionalmente das estradas de ferro  existentes,  com  grande  número  de  ramais  e  trechos  de  via compartilhada. Eram linhas independentes, de companhias diversas, e muitas  vezes  buscavam  apenas  conectar  estações  terminais  centrais das ferrovias que não conseguiam penetrar nos centros antigos'', também segundo ele, é a partir daí que que os serviços suburbanos existentes começam a ser dinamizados em novas redes, que são ``impulsionadas  pela  necessidade  de  aumentar  o  rendimento  dos serviços  suburbanos  existentes.  As  principais  medidas  neste  sentido foram  a  segregação  das  linhas,  duplicando  o  número  de  vias  para separar serviços suburbanos dos serviços de longa distância e  cargas; construção  de  interligações  centrais,  em  túnel  ou  elevado, “amarrando” linhas que terminavam no centro; e construção de novas linhas. Estas medidas levam para a configuração de uma rede própria de trens urbanos de passageiros, tornando-a próxima de uma rede de metrô''\cite[pág. 32]{Isoda}.
+	
+\section{Evolução da demanda de passageiros}\label{ss:demanda}
+
+Para \cite[p. 16]{Ferreira} a presença da \gls{cptm} é marcante no território, com resultados entusiasmantes após mais de uma década de investimentos, além disso, destaca que a \gls{cptm} serve 19 municípios na \gls{rmsp} (incluindo a capital paulista) e outros 3 fora dela (na \gls{auj}). Neste sentido, a presença da \gls{cptm} é sinônimo de presença do Trem Metropolitano, assim sendo, com base em \cite{Ferreira}[pág. 15, nota de rodapé 1], elaboro a seguinte tabela com os municípios atendidos:
+
+\begin{center}
+	\begin{longtable}{|l|l|l|}
+		\caption{Cidades atendidas pela CPTM por linha} \\
+		\hline
+		\textbf{Linha} & \textbf{Município} & \textbf{Região} \\
+		\hline
+		\endfirsthead
+		\multicolumn{3}{c}%
+		{\tablename\ \thetable\ -- \textit{Continuado da página anterior}} \\
+		\hline
+		\textbf{Linha} & \textbf{Município} & \textbf{Região} \\
+		\hline
+		\endhead
+		\hline \multicolumn{3}{r}{\textit{Continua na próxima página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		Linha 7-Rubi & São Paulo & \gls{rmsp} \\
+		Linha 7-Rubi & Caieiras & \gls{rmsp} \\
+		Linha 7-Rubi & Franco da Rocha & \gls{rmsp} \\
+		Linha 7-Rubi & Francisco Morato & \gls{rmsp} \\
+		Linha 7-Rubi & Campo Limpo Paulista & \gls{auj} \\
+		Linha 7-Rubi & Várzea Paulista & \gls{auj} \\
+		Linha 7-Rubi & Jundiaí & \gls{auj} \\
+		Linha 8-Diamante & São Paulo & \gls{rmsp} \\
+		Linha 8-Diamante & Osasco & \gls{rmsp} \\
+		Linha 8-Diamante & Carapicuíba & \gls{rmsp} \\
+		Linha 8-Diamante & Barueri & \gls{rmsp} \\
+		Linha 8-Diamante & Jandira & \gls{rmsp} \\
+		Linha 8-Diamante & Itapevi & \gls{rmsp} \\
+		Linha 9-Esmeralda & São Paulo & \gls{rmsp} \\
+		Linha 9-Esmeralda & Osasco & \gls{rmsp} \\
+		Linha 10-Turquesa & São Paulo & \gls{rmsp} \\
+		Linha 10-Turquesa & São Caetano & \gls{rmsp} \\
+		Linha 10-Turquesa & Santo André & \gls{rmsp} \\
+		Linha 10-Turquesa & Mauá & \gls{rmsp} \\
+		Linha 10-Turquesa & Ribeirão Pires & \gls{rmsp} \\
+		Linha 10-Turquesa & Rio Grande da Serra & \gls{rmsp} \\
+		Linha 11-Coral & São Paulo & \gls{rmsp} \\
+		Linha 11-Coral & Ferraz de Vasconcelos & \gls{rmsp} \\
+		Linha 11-Coral & Poá & \gls{rmsp} \\
+		Linha 11-Coral & Suzano & \gls{rmsp} \\
+		Linha 11-Coral & Mogi das Cruzes & \gls{rmsp} \\
+		Linha 12-Safira & São Paulo & \gls{rmsp} \\
+		Linha 12-Safira & Poá & \gls{rmsp} \\
+		Linha 12-Safira & Itaquaquecetuba & \gls{rmsp} \\
+		Linha 13-Jade & São Paulo & \gls{rmsp} \\
+		Linha 13-Jade & Guarulhos & \gls{rmsp} \\
+		\end{longtable}
+\end{center}	
+
+A \autoref{fig:demanda} apresenta um gráfico de demanda\footnote{Ver \gls{mdu}.} das seis linhas da empresa. Somadas, as linhas transportam mais de 2 milhões de passageiros. É oportuno salientar que a dissociação da rede da \gls{cptm} do território, acaba por eliminar um elemento estruturante importante, agravando o quadro de escassez de linhas por habitante, ao invés de induzir mudanças positivas, contudo, vale notar o papel difuso da \gls{cptm} apontado por \cite[p. 122]{Isoda}: ``em suma, a \gls{cptm} tem hesitado em definir quais os seus papéis no transporte metropolitano, abarcando simultaneamente as escalas metropolitana, regional, e central-metropolitana (em grande parte por omissão da \gls{cmsp})''.
+
+\begin{center}
+	\begin{tikzpicture}
+	\begin{axis}[
+	title=Gráfico de demanda baseado em \cite{sitecptm1},
+	grid=both,
+	ymin=150,
+	ymax=750,
+	ybar,
+	symbolic x coords={7,8,9,10,11,12},
+	nodes near coords, nodes near coords align={vertical},
+	xlabel=Linha,
+	ylabel=Passageiros (MDU em milhares),
+	enlargelimits=0.15,
+	]
+	\addplot+[ybar] coordinates
+	{(7,468.000)
+		(8,461.900)
+		(9,567.300)
+		(10,355.600)
+		(11,701.200)
+		(12,248.700)};
+	\end{axis}
+	\end{tikzpicture}
+	\label{fig:demanda}
+\end{center}
 
 \section{Parceiras público-privadas em andamento}
 
@@ -176,7 +367,13 @@ Para facilitar a compreensão, algumas convenções são adotadas ao longo do li
 
 \section{Eixos de desenvolvimento}
 
-\lipsum[3-4]
+Sendo a malha da \gls{cptm} um elemento estruturante e gerida pelo governo estadual de São Paulo, apesar do enfraquecimento do papel do estado no planejamento do território, vale destacar que a mesma esfera de poder conta com uma estatal dedicada ao planejamento territorial da \gls{rmsp} e outras regiões metropolitanas, vide \cite[p. 224]{Stefani}, ``Cabe à \gls{emplasa} a execução de assessoramento ao Governo do Estado de São Paulo para questões metropolitanas. Nesse sentido, elabora projetos de uso e ocupação do solo, de urbanização e revitalização urbana, planos regionais e sub regionais, estudos sócio-econômicos e políticos. Presta ainda, assessoria técnica aos municípios do complexo metropolitano expandido: Grande São Paulo, Baixada Santista e Campinas, além das concentrações urbanas do Vale do Paraíba, Sorocaba e outras áreas de seu entorno''. Justifica-se, portanto, tal consideração quanto à presença de linhas da \gls{cptm}.
+
+Apesar do papel institucional difuso da CPTM apontado por \cite{Isoda}\footnote{Vide menção na \autoref{ss:demanda}} e do atendimento herdado de outras estatais, \cite[pág. 97]{Ferreira} salienta que ``Como elemento para o planejamento e a organização da cidade, não parece haver dúvidas de que a CPTM, até agora, está credenciada a ter o papel indutor e estruturador que são creditados aos transportes de alta capacidade e de qualidade''. Os dois autores demonstram que problemas políticos e institucionais, bem como a conjuntura econômica de determinadas épocas, contribuíram para dificultar a segregação dos trens de carga e também avanços mais significativos no programa de modernização da \gls{cptm}. Tal condição não é surpreendente, visto que \cite[pág. 31]{Acselrad}, analisando as transformações de corte neoliberal, bem como outras ligadas à acumulação flexível, aponta: ``Tudo que diz respeito ao ordenamento	espacial regulamentar da cidade, inclusive suas dimensões ecológicas, se esvai em ausência	de forças de coordenação, que são eventualmente substituídas pela auto-organização da “governança corporativa”, da parceria privado-privado, ou seja, em parte crescente, pelos próprios capitais em competição''.
+
+O Trem Metropolitano pode ser encarado como um elemento coesivo do território, no sentido infraestrutural, como elemento durável, referencial e articulador\footnote{``(\dots) os tempos dos retornos dos investimentos feitos na ferrovia são normalmente diferentes daqueles de outros investimentos e, principalmente, as suas características influem na localização das demais atividades humanas, modificam a paisagem de forma indelével, mesmo após seu abandono'' (\cite[pág. 13]{Ferreira})}.
+
+Sendo a malha da CPTM um elemento estruturante e gerida pelo governo estadual de São Paulo, apesar do enfraquecimento do papel do estado no planejamento do território, vale destacar que a mesma esfera de poder conta com uma estatal dedicada ao planejamento territorial da \gls{rmsp} e outras regiões metropolitanas, vide \cite[p. 224]{Stefani}, ``cabe à \gls{emplasa} a execução de assessoramento ao Governo do Estado de São Paulo para questões metropolitanas. Nesse sentido, elabora projetos de uso e ocupação do solo, de urbanização e revitalização urbana, planos regionais e sub regionais, estudos sócio-econômicos e políticos. Presta ainda, assessoria técnica aos municípios do complexo metropolitano expandido: Grande São Paulo, Baixada Santista e Campinas, além das concentrações urbanas do Vale do Paraíba, Sorocaba e outras áreas de seu entorno.''
 
 \section{Habitação social em complexos de habitação intensiva}
 
@@ -244,12 +441,12 @@ Já em relação às situações específicas, é relativamente comum observar a
 
 \subsection{Pioneirismo na adoção de bilhetes com QR Codes}
 
-Aparentemente a CPTM tem desejado reduzir o uso do bilhete magnético, para tanto, mapeou as estações nas quais ele era mais usado e propôs uma alternativa em parceria com a Autopass (a mesma do Cartão BOM, utilizado nos intermunicipais da EMTU): emitir a passagem com \textit{QR Codes} impressos.
+Aparentemente a CPTM tem desejado reduzir o uso do bilhete magnético, para tanto, mapeou as estações nas quais ele era mais usado e propôs uma alternativa em parceria com a Autopass (a mesma do Cartão BOM, utilizado nos intermunicipais da EMTU): emitir a passagem com \textit{QR Codes} impressos (vide \autoref{fig:l8_qr}).
 
-\begin{figure}[htb]
+\begin{figure}[b!]
 	\centering
-	\includegraphics[width=\linewidth]{informativo_l8_qrcode}
 	\caption[Informativo QR Codes]{Folheto explicativo distribuído na Estação Lapa da Linha 8-Diamante}
+	\includegraphics[width=\linewidth]{informativo_l8_qrcode}
 	\label{fig:l8_qr}
 \end{figure}
 
@@ -315,9 +512,9 @@ A verdadeira requalificação da CPTM é de fundamental importância para uma po
 O projeto do expresso\footnote{\url{http://www.agenciainterativa.com.br/clientes/aspea/ver_materia.asp?id=698}} entre a sub-região Oeste da Região Metropolitana e a Zona Oeste da cidade de São Paulo, alterando a vida de quem utiliza as linhas 8 e 9, por exemplo, é muito pouco discutido, nele, um trem expresso com paradas nas estações Barueri, Carapicuíba e Osasco vai direto para a Estação Pinheiros, terminal do serviço. O projeto também esbarra com outra mudança: a da Linha 9 passar fazer terminal na Lapa, se conectando às linhas 7 e 8, algo que remete assim como o próprio Expresso Oeste-Sul ao ano de 2011.
 
 \begin{figure}[htb]
+	\caption[Diagrama do Expresso Oeste-Sul]{Infográfico sobre o Expresso Oeste-Sul, extraído do link da ASPEA no parágrafo acima}
 	\centering
 	\includegraphics[width=\linewidth]{aspea_oeste-sul}
-	\caption[Diagrama do Expresso Oeste-Sul]{Infográfico sobre o Expresso Oeste-Sul, extraído do link da ASPEA no parágrafo acima}
 	\label{fig:aspea_oeste-sul}
 \end{figure}
 
@@ -341,20 +538,13 @@ Como tentei mostrar, ao limitarmos virtualmente o campo de atuação de um siste
 	\infocaio{24/10/2014}{https://goo.gl/i7aVkT}
 \end{info}
 
-\section{Estação Luz}
+\section{Estação Luz}\label{s:luz}\index{Estação Luz}
 
 Imponente por fora, a estação vive hoje cenas de saturação, que muitas vezes levam a comportamentos no mínimo duvidosos (para não dizer arriscados) nos horários de pico. A estrutura, de arquitetura inglesa, revela uma rotina apressada, que por vezes sobrepõe-se a razão. A Estação da Luz merece viver melhores dias e, com ela, todos os passageiros e passageiras.
 
-\subsection{Projeto Integração Centro}\label{ss:icentro}
+\subsection{Projeto Integração Centro}\label{ss:icentro}\index{Integração Centro}
 
 Oficialmente, a CPTM informa como data de inauguração a data de 30/11/2004, a informação está contida na área de linhas do site\footnote{\url{https://www.cptm.sp.gov.br/sua-viagem/Pages/Linhas.aspx}}. O ano de 2004 está relacionado com o fracassado Projeto Integração Centro, uma tentativa de conexão entre as seis linhas da CPTM e o eixo central (Brás-Luz-Barra Funda), que na altura acabou subestimando a demanda dos subúrbios e o próprio papel do sistema de trilhos, que passava a ganhar contornos de malha integrada, algo que até então ainda não era tão enfatizado.
-
-\begin{figure}[htb]
-	\centering
-	\includegraphics[width=\linewidth]{diagrama_integracao_centro}
-	\caption[Mapa do Integração Centro]{Antigo mapa do transporte metropolitano, com o Integração Centro em destaque}
-	\label{fig:diag_ic}
-\end{figure}
 
 Pagamos o preço pelas limitações oriundas do Integração Centro até os dias atuais. Corredores e acessos foram dimensionados para um universo em que o intervalo era de 10 minutos e a demanda das linhas da CPTM não chegava nem perto dos cerca de 3 milhões atuais. Projetos ruins no passado significam sofrimento por até uma década ou mais.
 
@@ -381,10 +571,19 @@ Simplesmente faltava uma plataforma adicional para viabilizar a operação que a
 
 A CPTM decidiu, mesmo após realização de obras na via permanente, manter a Linha 10 no Brás. A decisão revoltou alguns passageiros e contrariou o informativo impresso que chegou a ser distribuído na época, como podemos ver na \autoref{fig:l10_luz}.
 
-\begin{figure}[htb]
+\begin{landscape}
+	\begin{figure}[h]
+		\centering
+		\caption[Mapa do Integração Centro]{Antigo mapa do transporte metropolitano, com o Integração Centro em destaque}
+		\includegraphics[width=21cm]{diagrama_integracao_centro}
+		\label{fig:diag_ic}
+	\end{figure}
+\end{landscape}
+
+\begin{figure}[h!]
+	\caption[Informativo agosto/2011]{Informativo distribuído em agosto de 2011}
 	\centering
 	\includegraphics[width=\linewidth]{informativo_l10_luz}
-	\caption[Informativo agosto/2011]{Informativo distribuído em agosto de 2011}
 	\label{fig:l10_luz}
 \end{figure}
 
@@ -417,12 +616,14 @@ Já com relação à Estação Júlio Prestes, em 07/02/2012 o jornal Estadão p
 
 Como falamos no início, a Estação Luz sofreu diversas mudanças, mas infelizmente a vizinha Júlio Prestes não teve a mesma sorte e uma grande oportunidade foi desperdiçada, uma vez que não só a Estação Júlio Prestes continuou sem grandes modificações (até as placas internas são as mesmas da época da Fepasa), como também está isolada do restante do sistema de trilhos, uma vez que apenas a Linha 8-Diamante (Júlio Prestes-Itapevi-Amador Bueno) dá acesso à estação. Mais de 10 anos após o Projeto Integração Centro, ainda não há qualquer definição, a empresa parece ter engavetado de forma mesquinha e egoísta o projeto de enterramento dos trilhos, ao passo que também demonstra indecisão: não sabe se investe ou não na Estação Júlio Prestes, uma vez que no contexto de uma nova gare para a Estação Luz, a antiga estação da Sorocabana seria transformada em um centro de convenções.
 
+\begin{landscape}
 \begin{figure}[htb]
-	\centering
-	\includegraphics[width=\linewidth]{slides_nova_luz}
 	\caption[Nova Luz conforme slides da CPTM para a AEAMESP]{Slides 112, 114, 116 e 116 de uma apresentação da CPTM realizada na AEAMESP\footnote{\url{http://web.archive.org/web/20101227091520/http://biblioteca.aeamesp.org.br/smns/16smtf100914pl102.pdf}}. Aqui podemos ter uma ideia de como seria a Nova Luz (Gare Oeste da Estação Luz)}
+	\centering
+	\includegraphics[width=20cm]{slides_nova_luz}
 	\label{fig:slides_nova_luz}
 \end{figure}
+\end{landscape}
 
 Pouco transparente, a CPTM não precisa datas para seus projetos, não publica cronogramas e não conduz pesquisas com usuários, também parece avessa à participação popular.
 
@@ -462,7 +663,9 @@ A superlotação e os gargalos na Estação da Luz \textemdash\ e também no eix
 	\infocaio{01/03/2015}{https://goo.gl/r9Xeok}
 \end{info}
 
-\section{Estação Ipiranga}
+\section{Estação Ipiranga}\label{s:ipg}
+
+%TODO inserir fotografias
 
 O verão praticamente já começou e as chuvas características também. Infelizmente a Estação Ipiranga, com sua estrutura de quase 60 anos, não é uma das mais confortáveis para ser acessada quando está chovendo.
 
@@ -477,35 +680,698 @@ Em estações mais modernas da CPTM, provavelmente o mezanino e o conjunto de pa
 A situação da Estação Ipiranga é reflexo do impasse relacionado ao Expresso ABC, que nunca saiu do papel (a predileção por fazê-lo por meio de uma PPP parece ter só contribuído para o impasse). Problemas similares podem ser observados em outras estações na mesma época, como Mooca, São Caetano, Utinga, Prefeito Saladino e Santo André.
 
 \begin{figure}[htb]
-	\centering
-	\includegraphics[width=\linewidth]{calc_bcb_eabc}
 	\caption[Valor corrigido do Expresso ABC]{Implantação do Expresso ABC poderia custar mais de 1 bilhão atualmente corrigindo pelo IPC-A. Fonte: Calculadora do cidadão do Banco Central do Brasil}
+	\centering
+	\includegraphics[width=10cm]{calc_bcb_eabc}
 	\label{fig:calc_bcb_eabc}
 \end{figure}
 
 % fonte da calculadora: https://www3.bcb.gov.br/CALCIDADAO/publico/exibirFormCorrecaoValores.do?method=exibirFormCorrecaoValores&aba=1
 
-A implantação do Expresso ABC está longe de ser trivial: em notícia oficial de 7 de julho de 2006, o custo de implantação do era de R$ 617,9 milhões (ou R$ 1.220.650.685,12, corrigindo o valor por meio do IPC-A/IBGE até 7 de novembro de 2018), soma-se ainda o fato de que, para a CPTM mexer no plano de vias da Linha 10-Turquesa é preciso autorização da União.
+A implantação do Expresso ABC está longe de ser trivial: em notícia oficial de 7 de julho de 2006, o custo de implantação do era de R\$ 617,9 milhões (ou R\$ 1.220.650.685,12, corrigindo o valor por meio do IPC-A/IBGE até 7 de novembro de 2018), soma-se ainda o fato de que, para a CPTM mexer no plano de vias da Linha 10-Turquesa é preciso autorização da União.
 
 Como temos divulgado e opinado desde 2015, o Grande ABC precisa de uma ligação expressa e a faixa de domínio propicia facilidades para a implantação que não são encontradas em outras linhas, ou seja, mesmo custando mais de R\$ 1 bilhão, ainda assim a complexidade é menor do que tentar a empreitada em outras linhas.
 
-Com a predileção privatista do novo governador de São Paulo, João Doria, o momento é de máxima atenção para evitar sucateamento e contratos ruins, pois a chance de todo o sistema ser concedido à iniciativa privada é muito grande e, infelizmente, apelos para isso não são tão difíceis de serem encontrados:
+Com a predileção privatista do novo governador de São Paulo, João Doria, o momento é de máxima atenção para evitar sucateamento e contratos ruins, pois a chance de todo o sistema ser concedido à iniciativa privada é muito grande e, infelizmente, apelos para isso não são tão difíceis de serem encontrados (vide \autoref{fig:twitter_captura01}).
+
+\begin{wrapfigure}{l}{0.5\textwidth}
+	\centering
+	\caption[Tuíte pró-privatização da Linha 10]{Usuário acredita que as inundações na Linha 10 serão resolvidas com uma ``privatização''}
+	\includegraphics[width=0.9\linewidth]{twitter_captura01}
+	\label{fig:twitter_captura01}
+\end{wrapfigure}
 
 A Linha 10-Turquesa precisa de investimentos que não serão fáceis de serem conseguidos diante do atual momento vivido pelo país e pelo estado (para consultar séries históricas de execução orçamentária, clique aqui), entretanto, o DCI informou em outubro que “a arrecadação do Estado de São Paulo somou R\$ 111,615 bilhões entre janeiro e agosto deste ano, um aumento real (descontada a inflação) de 2,6\% em relação a igual período do ano passado”. Se uma concessão aparecer no horizonte como algo inevitável, é preciso garantir que o Expresso ABC esteja entre as contrapartidas a serem exigidas da concessionária, bem como a reconstrução das estações depois de Tamanduateí, além da reconstrução das estações Mooca e Ipiranga.
+
+\begin{info}
+	\infocaio{16/12/2018}{http://bit.ly/2QUgzQt}\\
+	\textbf{Agradecimentos:} Ivo Ramos (indicação da notícia de 2006 sobre o Expresso ABC)
+\end{info}
+
+\section{Estação Tamanduateí}
+
+\subsection{Desindustrialização}
+
+A Linha 10 conecta subcentros regionais que atraem grande interesse para viagens, uma vez que concentram empregos e serviços, atraindo não só a população das cidades atendidas, como Mauá, Santo André e São Caetano, mas também da própria capital, São Paulo\cite[pág. 66]{Ferreira}. Como explica \cite[pág. 115]{Stefani}: ``ocorre aqui, uma situação interessante no processo de industrialização paulista. Apesar de ser o sistema rodoviário, instalado no ABC paulista, o responsável pela implantação de diversos setores industriais em São Paulo, como o de mecânica, metalurgia, elétrica e química, tais setores continuam ainda a se instalar no eixo ferroviário e, de certa forma, determinar o crescimento da cidade'', contudo, o mesmo processo não se sustentou em São Paulo, o que se traduz na subutilização do solo urbano ao longo da orla ferroviária após a divisa São Caetano-São Paulo.
+
+\begin{figure}[h]
+	\caption{Mapa da rede afixado dentro de um trem da \gls{cmsp}, com parte da Linha 10 visível, de Brás até Utinga (2015)}
+	\includegraphics[keepaspectratio,width=\textwidth]{DSCN5732.JPG}
+\end{figure}
+
+As metrópoles são o palco em que se dão os movimentos de rearranjo das atividades produtivas deprimidas pela suplantação do fordismo e pela desterritorialização/desindustrialização de corte neoliberal\cite{Acselrad}. A Linha 10 da \gls{cptm} é um espelho do impacto dos movimentos mencionados, sendo visíveis as glebas industriais subutilizadas ao longo das Estações Tamanduateí, Ipiranga e Mooca, estações aqui utilizadas para definição do caso da Linha 10.
+
+\begin{figure}[h]
+	\caption{Estação Mooca (2016)}
+	\includegraphics[width = \textwidth]{IMG_20160317_165438b.jpg}
+\end{figure}
+
+A visibilidade que menciono no parágrafo anterior é um indicador do descolamento entre uma ferrovia metropolitana com alta capacidade de transporte de passageiros e a orla ferroviária, visto que o acesso às estações acaba sendo prejudicado, bem como seu diálogo com as pessoas, imóveis e equipamentos públicos e privados ao redor. No fragmento abaixo, \cite{Acselrad} fornece uma explanação que ajuda a compreender tal descolamento:
+
+\begin{citacao}
+	Em contexto de acumulação flexível, a intensificação e variabilidade temporal do uso de recursos ambientais ameaça a estabilidade do “metabolismo urbano”. Conforme sublinha Veltz, a metrópole acelera a divisão do trabalho e a diversificação contínua dos bens e serviços, constituindo-se em lugar privilegiado do redesenvolvimento de sistemas produtivos doravante ultradecompostos. A economia da velocidade e da incerteza, associada a uma demanda cada vez menos previsível, destrói e recria em permanência o território social. Dadas as altas taxas de juros que tornam o peso fundiário das operações muito elevado, o urbanismo just-in-time de mercado – aquele protagonizado pelas próprias empresas – tende a ser cada vez menos regulamentar e cada vez mais comandado pelas	lógicas do capital imobiliário \cite{Acselrad}. Tudo que diz respeito ao ordenamento espacial regulamentar da cidade, inclusive suas dimensões ecológicas, se esvai em ausência de forças de coordenação, que são eventualmente substituídas pela auto-organização da	“governança corporativa”, da parceria privado-privado, ou seja, em parte crescente, pelos próprios capitais em competição.
+	(\cite[pág. 31]{Acselrad})
+\end{citacao}
+
+\subsection{Bairros do Tamanduateí}
+
+A região de atendimento da Linha 10 que estou abordando aqui é objeto de uma \gls{ouc} da Prefeitura de São Paulo. A municipalidade tem em andamento a \gls{ouc} Bairros do Tamanduateí. Destaco dois parágrafos da plataforma Gestão Urbana SP que versam sobre a operação:
+
+\begin{citacao}
+	A intervenção tem origem nos estudos da Operação Urbana Diagonal Sul, prevista no Plano Diretor Estratégico de 2002, complementados em 2011 por um Consórcio de empresas capitaneadas pelo escritório Vigliecca e Associados, sob contrato da SMDU. Os estudos então desenvolvidos compreenderam o Plano Urbanístico Específico, o Estudo de Capacidade de Suporte da Infraestrutura de Mobilidade, o Estudo de Avaliação Econômica, o Plano de Comunicação, o Estudo de Impacto Ambiental e o respectivo Relatório de Impacto Ambiental.
+	
+	Confirmada pelo novo Plano Diretor Estratégico, aprovado pela Lei 16.050 de 31 de julho de 2014, a OUC Bairros do Tamanduateí abrange quase a totalidade do Arco Tamanduateí, um dos Setores da Orla Ferroviária e Fluvial da Macroárea de Estruturação Metropolitana.
+	(\cite{smdu})
+\end{citacao}
+
+Devido ao passado da linha, sua vocação como via de escoamento de carga e de transporte de mão de obra operária continua mostrando sinais que sobrevivem até os dias atuais. Na capital, as glebas industriais há muito perderam força, dando início a discussões sobre o que fazer em bairros como a Vila Carioca (distrito da Moóca), as quais continuam reacendendo a questão da CPTM, que inclusive chegou a contratar um estudo junto ao UNA Arquitetos para o eixo Moóca-Ipiranga, para o qual:
+
+\begin{citacao}
+	Diante da nova inscrição territorial e mudança qualitativa da indústria em São Paulo, o destino de algumas áreas centrais na cidade se tornou objeto urgente de estudo por parte do poder público. A questão é comum à extensão das linhas férreas e coincide com o seu processo de modernização.
+	
+	O setor Mooca e Ipiranga, cortado pela Avenida do Estado, poderá ser reestruturado a partir desses enormes terrenos vagos. Esses vazios permitem uma nova ocupação que aproxima a população de redes infra-estruturais instaladas. Ao mesmo tempo esses espaços residuais concentram estratos diversos de formação da cidade que merecem ser preservados. O projeto se coloca em sentido de continuidade com os diferentes fluxos da cidade existente, propondo um processo de acumulação de vários tempos em um mesmo espaço. Em contraposição a uma ocupação imobiliária em curso, que segrega e apaga esses vestígios.
+	\cite{unaarq}
+\end{citacao}
+
+Legalmente, para que a \gls{ouc} fosse possível, o poder público local da capital definiu o Arco Tamanduateí, o qual está incluído na Macroárea de Estruturação Metropolitana. Fora da macroárea não é possível desenvolver uma operação urbana, que no caso do Arco Tamanduateí, é considerado pela \gls{smdu} um dos principais instrumentos de transformação\cite{smdumacro}.
+
+\begin{figure}[h]
+	\caption{Estação Tamanduateí (2016)}
+	\includegraphics[keepaspectratio,width=\textwidth]{DSCN7465.JPG}
+\end{figure}
+
+A Estação Tamanduateí é, até o momento da impressão do livro, a mais moderna de toda a Linha 10-Turquesa, representando avanços drásticos em relação àquelas que estão localizadas no Grande ABC, principalmente. Trata-se de uma estação intermodal, com conexão à Linha 2-Verde do Metrô, além de acesso a ônibus municipais e intermunicipais. Sua construção, no entanto, não representou alterações significativas na região em que se insere, assim, além dos ônibus, sua articulação com o entorno se limita sobretudo ao acesso facilitado a um centro comercial vizinho (Central Plaza Shopping) de uma das faces da estação. Assim como as estações Mooca e Ipiranga, ela está inserida no Arco Tamanduateí e, por conseguinte, na \gls{ouc} Bairros do Tamanduateí.
+
+\begin{center}
+	\begin{longtable}{|l|l|p{5.3cm}|p{4.5cm}|}
+		\caption{Tabela com as linhas de ônibus na Estação Tamanduateí}\\
+		\hline
+		\textbf{Linha} & \textbf{Tipo} & \textbf{Viagem de Ida} & \textbf{Viagem de Volta} \\
+		\hline
+		\endfirsthead
+		\multicolumn{4}{c}%
+		{\tablename\ \thetable\ -- \textit{Continuado da página anterior}} \\
+		\hline
+		\textbf{Linha} & \textbf{Tipo} & \textbf{Viagem de Ida} & \textbf{Viagem de Volta} \\
+		\hline
+		\endhead
+		\hline \multicolumn{4}{r}{\textit{Continua na próxima página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		045 & EMTU & Santo André (Vila Palmares) & São Paulo (Tamanduateí) \\
+		3134-10 & SPTrans & Shopping Aricanduva & Metrô Tamanduateí \\
+		4031-10 & SPTrans & Pq. Santa Madalena & Metrô Tamanduateí \\
+		5110-41 & SPTrans & São Mateus & Metrô Tamanduateí \\
+		%\hline
+	\end{longtable}
+\end{center}
+
+Segundo informações da plataforma de transparência ``PlanejaSampa'' da Prefeitura de São Paulo, a Meta 123 do Programa de Metas 2013-2016 é a responsável por ``Aprovar a Operação Urbana Bairros do Tamanduateí, a revisão da Operação Urbana Água Branca e iniciar os estudos do projeto Arco Tietê'', tendo sido, conforme dados de 17/12/2015, marcada como concluída, com 100\% dos objetivos atingidos (\cite{smg123}).
+
+Amparando-se no \gls{pl} nº 723/2015, que estabelece ``objetivos, diretrizes, estratégias e mecanismos para a implantação da Operação Urbana Consorciada Bairros do Tamanduateí, define Projeto de Intervenção Urbana para a área da Operação Urbana Consorciada e autoriza a criação da empresa Bairros do Tamanduateí S/A'' (\cite{pl723}), a \gls{smdu} resumidamente determina as seguintes premissas para a \gls{ouc} (\cite{smdu2014}):
+
+\begin{itemize}
+	\item Cidade compacta: moradia e emprego próximos;
+	\item Áreas verdes acessíveis numa caminhada de 15 minutos;
+	\item Uso misto nos imóveis, com fachadas ativas;
+	\item Integração tipológica, garantindo convivência entre o tecido atual e novas edificações;
+	\item Maior mobilidade e maior qualidade urbana.
+\end{itemize}
+
+Concluindo, as intervenções propostas são faseadas e devem se estender por cerca de 50 anos até elevar as unidades residenciais para 83.958 (estoque de 3.964.499 m$^2$), os leitos hospitalares para 1.540 (ante 366), creches/pré-escolas para 101 (ante 34) e as escolas de ensino fundamental e médio para 45 (ante 22), além disso, o plano prevê um aumento de 138\% de áreas verdes (6 novos parques), além de outras ações ligadas ao viário e drenagem (\cite{smdu2014}).
+
+\begin{figure}[h]
+	\caption{Cenário temporal 2046: situação final (\cite{smdu2014})}
+	\includegraphics[keepaspectratio,width=\textwidth]{oucbt_consolidado.png}
+\end{figure}
+
+\subsection{Alguns dados}
+
+Conforme dados do \cite{ibgeXSP}, São Paulo tem uma população de 11.253.503 habitantes e possui um território com 1.521.110 km$^2$, atendido por 46 estações (\cite{sitecptm1}), das quais 3 foram mencionadas aqui (6,5\% do total de estações da \gls{cptm} no município).
+
+As estações Mooca e Ipiranga possuem um perfil de demanda bastante distinto de Tamanduateí, não sendo nós intermodais, uma vez que não contam com quaisquer facilidades para conexão com ônibus ou, num sentido de maior peso, conexão com outra linha de alta capacidade, como a Linha 2-Verde, acessível por meio da Estação Tamanduateí. A diferença no perfil de demanda exigiu a separação da Estação Tamanduateí no gráfico que veremos a seguir.
+
+\begin{center}
+	\begin{longtable}{|p{2cm}|p{3cm}|p{3cm}|p{3cm}|}
+		\caption{Demanda do grupo de estações da Linha 10\, baseado em Mídia CPTM}\\
+		\hline
+		\textbf{Média} & \textbf{Mooca} & \textbf{Ipiranga} & \textbf{Tamanduateí} \\
+		\hline
+		\endfirsthead
+		\multicolumn{3}{c}%
+		{\tablename\ \thetable\ -- \textit{Continuado da página anterior}} \\
+		\hline
+		\textbf{Média} & \textbf{Mooca} & \textbf{Ipiranga} & \textbf{Tamanduateí} \\
+		\hline
+		\endhead
+		\hline \multicolumn{3}{r}{\textit{Continua na próxima página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		2011 & 7.689 & 10.900 & 45.971 \\
+		2012 & 8.072 & 10.578 & 53.779 \\
+		2013 & 7.950 & 10.620 & 58.093 \\
+		2014 & 7.664 & 10.558 & 58.112 \\
+		2015 & 6.872 & 9.505 & 57.864 \\
+	\end{longtable}
+\end{center}
+
+\newpage
+
+\begin{center}
+	\begin{tikzpicture}
+	\begin{axis}[
+	title=Evolução da demanda baseado em Mídia CPTM,
+	grid=both,
+	scaled ticks=false, tick label style={/pgf/number format/fixed},
+	x tick label style={/pgf/number format/1000 sep=},
+	y tick label style={/pgf/number format/.cd, set thousands separator={.}},
+	legend style={at={(0.5,-0.3)},anchor=north,legend columns=-1},
+	ylabel=Passageiros (MDU em milhares),
+	xlabel=Ano,
+	]
+	\addplot coordinates
+	{(2011,7689
+		) (2012,8072) (2013,7950) (2014,7664) (2015,6872)};
+	\addlegendentry{Mooca}
+	
+	\addplot coordinates
+	{(2011,10900) (2012,10578) (2013,10620) (2014,10558) (2015,9505)};
+	\addlegendentry{Ipiranga}
+	
+	\end{axis}
+	\end{tikzpicture}
+\end{center}
+
+A demanda da Estação Tamanduateí, já em 2011, superava 40 mil passageiros em \gls{mdu}, número que é superior ao de todas as estações abordadas neste trabalho.
+
+\begin{center}
+	\begin{tikzpicture}
+	\begin{axis}[
+	title=Evolução da demanda baseado em Mídia CPTM,
+	grid=both,
+	ymax=60000,
+	x tick label style={/pgf/number format/1000 sep=},
+	y tick label style={/pgf/number format/.cd, set thousands separator={.}},
+	legend style={at={(0.5,-0.3)},anchor=north,legend columns=-1},
+	scaled ticks=false, tick label style={/pgf/number format/fixed},
+	ylabel=Passageiros (MDU em milhares),
+	xlabel=Ano,
+	]
+	\addplot coordinates
+	{(2011,45971) (2012,53779) (2013,58093) (2014,58112) (2015,57864)};
+	\addlegendentry{Tamanduateí}
+	
+	\end{axis}
+	\end{tikzpicture}
+\end{center}
+
+\begin{obs}
+	Seção fortemente baseada em um trabalho de graduação de uma disciplina da Universidade Federal do ABC.
+\end{obs}
+
+\begin{info}
+	\infocaio{25/04/2016}{https://github.com/caiocco/ufabc-BH0301}
+\end{info}
+
+\section{Estação Aeroporto\textperiodcentered Guarulhos}\label{s:agu}\index{Estação Aeroporto\textperiodcentered Guarulhos}
+
+\subsection{Introdução}
+
+A Linha 13-Jade (Eng. Goulart-Aeroporto) da Companhia Paulista de Trens Metropolitanos (CPTM) foi aberta ao público pela primeira vez no último sábado, 31, desde então, já ouvimos de tudo um pouco: “não chega no aeroporto”, “não serve para quem usa bagagens”, “não atende a cidade de Guarulhos”, “liga nada ao lugar nenhum” etc.
+
+Até que a expansão da Linha 2-Verde (atualmente Vila Madalena-Vila Prudente) alcance a cidade de Guarulhos, a Linha 13 será a única conexão sobre trilhos entre a capital e a segunda cidade mais populosa da Grande São Paulo. Trata-se, porém, de uma ligação que já nasce com evidentes limitações: a nova linha se conectará com o aeroporto justamente no terminal menos utilizado: o Terminal 4, escolha esta que reflete uma decisão do próprio aeroporto, como veremos a seguir; para piorar a situação, não existe um horizonte de curto prazo para expansão da linha, que ficará confinada por alguns anos na Estação Engenheiro Goulart da CPTM.
+
+\subsection{Prazos e promessas do poder público}
+
+A ordem de serviço para as obras civis da foi assinada em 2013 com a promessa de conclusão para 2015, postergada depois para 2016, porém as obras realmente só progrediram ao ponto de ser possível a entrega da linha em operação assistida (e limitada, com um único trem operando) no primeiro quadrimestre de 2018. Parte dos recursos vieram da Agência Francesa de Desenvolvimento.
+
+Expresso Aeroporto. É importante apontar que o governo estadual vinha prometendo uma ligação para o aeroporto internacional desde 2002, no entanto, aquele projeto envolvia uma PPP por exigência dos bancos de fomento e a iniciativa privada sempre exibiu desinteresse (veja aqui, aqui e aqui), situação esta que ficou reforçada quando o pouco participativo projeto Nova Luz se mostrou inviável, juridicamente e financeiramente, visto que estava prevista uma estação para uma linha para o aeroporto, que, lembremos também, desde o princípio tinha a proposta de ser um serviço executivo e mais caro. O Expresso Aeroporto, definitivamente morto e enterrado, era conhecido como sendo a Linha 14-Ônix – atualmente o número e pedra preciosa se encontram atribuídos à ligação Guarulhos-ABC que está sendo projetada pela CPTM.
+
+A confusão entre a Linha 13-Jade e a antiga Linha 14–Ônix ou Expresso Aeroporto, parece ter levado o governador Geraldo Alckmin a falar em mentira quando questionado pela Folha de S.Paulo. O que poderíamos dizer é: a grosso modo, senhor governador, não parece totalmente correto falar em mentira, afinal, a promessa de conexão entre a capital e o aeroporto tem mais de 10 anos. O que não parece ter ficado claro, inclusive para a imprensa, é a distinção entre os tipos de serviço ao longo dos anos, fruto, como apontamos, da predileção por uma iniciativa privada que sempre se mostrou desinteressada. O G1, por exemplo, fala em 14 anos de atraso, sem distinções.
+
+Conforme reportagem do Estadão intitulada “Trem para aeroporto de Cumbica começa a ser construído”, temos a confirmação da assinatura do contrato para as obras civis para atual Linha 13-Jade, que ocorreu quando o governo “jogou a toalha” de vez, sepultando a Linha 14-Ônix:
+
+\begin{citacao}
+	Em evento na Estação Palmeiras-Barra Funda, na zona oeste, o governador Geraldo Alckmin (PSDB) assinou a ordem de serviços para que a construção comece. Ele prometeu a entrega da linha, com quase 12 km de comprimento e três estações, para 2015.
+	
+	No fim do ano passado, o tucano havia afirmado que as obras começariam em março deste ano e que durariam 18 meses, até por volta de setembro de 2014.
+\end{citacao}
+
+\subsection{A iniciativa privada também sabe prometer (e não cumprir)}
+
+A mesma reportagem do Estadão explica os motivos da localização da estação do aeroporto, um dos pontos que tem gerado questionamentos nas redes sociais e até mesmo dentro do campo progressista, por pessoas ligadas ao campo da mobilidade de uma forma ou de outra:
+
+\begin{citacao}
+	A Estação Aeroporto Internacional de Guarulhos ficará suspensa sobre o canteiro da Rodovia Hélio Smidt e será conectada ao aeroporto por meio do terminal 4, o “puxadinho”, o menos movimentado dos três já abertos. Esse terminal é fisicamente desconectado de todos os demais. Para sanar o problema, a concessionária de Cumbica, a GRU Airport, prometeu construir um “people mover” para transportar gratuitamente os passageiros entre os terminais. Ainda não se sabe se será um monotrilho ou um veículo leve sobre trilhos (VLT).
+	
+	Fernandes disse que a escolha desse local \textemdash\ e não as imediações dos terminais 1 e 2 ou do futuro terminal 3, que será o maior \textemdash\ se deve ao fato de que a GRU Airport tem intenção de construir ali um shopping center, com fast food e serviços. “Ali na frente do terminal 4, nós vamos fazer uma asa de acesso direto para Guarulhos. Então, a população, através da estação, vai ter acesso ao aeroporto, para fazer uso de cinemas, shopping.”
+\end{citacao}
+
+Para piorar, segundo o blog Metrô CPTM, a concessionária estimava, no final de 2016, 18 meses para entregar um sistema de people mover do aeroporto, conectado à CPTM, o que não passou de uma promessa, feita por uma concessionária que já demonstrou dificuldades para pagamento da outorga exigida pelo poder concedente:
+
+\begin{citacao}
+	Na época, o presidente da concessionária, Antônio Miguel Marques, fez pouco caso da chegada da Linha 13 às proximidades do aeroporto. “Quando a Linha for entregue um dia antes inauguramos o people mover”, registraram alguns jornais. Agora, mesmo com todo atraso da linha da CPTM, o ‘trenzinho’ da GRU Airport não passa apenas de uma ideia. Segundo reportagem do jornal Folha de São Paulo, a concessionária estima entregar a ligação férrea entre a estação da Linha 13 e os terminais 2 e 3 apenas 18 meses após a abertura do ramal.
+\end{citacao}
+
+A GRU Airport demonstra que reavaliou o nível do atendimento que forneceria, como podemos ler em reportagem recente na Folha de S.Paulo, publicada em 31/03/2018:
+
+\begin{citacao}
+	O plano era usar um monotrilho, a exemplo de outros grandes aeroportos, mas segundo avaliação da GRU Airport, a demanda de passageiros será suficientemente atendida com o sistema rodoviário \textemdash\ agora consolidado.
+\end{citacao}
+
+A reportagem ainda salienta que a concessionária mais uma vez se esquivou de prestar esclarecimentos sobre o shopping que prometeu construir:
+
+\begin{citacao}
+	A GRU Airport foi questionada pela Folha, mas não respondeu sobre a previsão de inauguração do shopping, previsto para o terminal 3.
+\end{citacao}
+
+Apesar da concessionária garantir que os ônibus seriam suficientes, o COMMU identificou que os veículos circulavam lotados, além disso, o Diário do Transporte também criticou a falta de organização da concessionária. Confira abaixo nosso vídeo registrando um pouco da operação dos ônibus:
+
+%TODO inserir QR code do vídeo
+
+Para registros fotográficos dos ônibus superlotados logo no primeiro dia de operação assistida,confira o tuíte enviado pela Rádio Trânsito e reproduzido na \autoref{fig:twitter_captura02}.
+
+\begin{figure}[htb]
+	\caption[Ônibus lotados do aeroporto internacional]{Ônibus do aeroporto lotam no primeiro dia de operação da Linha 13-Jade da CPTM}
+	\centering
+	\includegraphics[width=10cm]{twitter_captura02}
+	\label{fig:twitter_captura02}
+\end{figure}
+
+\subsection{Ligando nada a lugar nenhum}
+
+Afirmar que a Linha 13-Jade liga nada a lugar nenhum é um bocado desrespeitoso com a periferia de São Paulo e também com a periferia de Guarulhos. Veja a seguir algumas considerações estação por estação:
+
+\begin{itemize}
+	\item Engenheiro Goulart: nesta estação é possível se transferir para a Linha 12-Safira (Brás-Calmon Viana) e também desfrutar do Parque Ecológico do Tietê;
+	\item Guarulhos-CECAP: nesta estação é possível acessar a rodoviária do município de Guarulhos e também parte dos conjuntos habitacionais projetados por Vilanova Artigas, portanto, é uma estação que pode modificar sensivelmente a vida de quem mora naqueles edifícios;
+	\item Aeroporto-Guarulhos: além do acesso aos ônibus do aeroporto, cujo tempo de trajeto varia bastante (o acesso ao Terminal 1, que concentra voos domésticos de baixo custo, por exemplo, leva aproximadamente 2 minutos, segundo a concessionária, por outro lado a concessionária diz que chegar no Terminal 3 exige mais de 10 minutos), há também um terminal de ônibus que concentra linhas municipais e intermunicipais, atendendo uma parcela ainda maior da população periférica de Guarulhos.
+\end{itemize}
+
+É importante tomarmos cuidado com o significado da expressão em questão para não tratar a periferia como nada. É paradoxal querer chegar num aeroporto que está localizado na periferia ao mesmo tempo que se tenta evitar contato com a infraestrutura que atende aquela mesma região periférica. Simplesmente não dá.
+
+Também é curioso como o famigerado discurso da “periferia primeiro”, recorrente em discussões sobre as carências na infraestrutura de transporte de massa, mostrou mais uma vez como se esgota rapidamente. Acompanhe o raciocínio: se a periferia tem deslocamentos pendulares e não existem políticas públicas para aumento do dinamismo e redução da pendularidade no horizonte de algumas décadas, implantar linhas que atendem sobretudo a periferia resulta em chacota, com pessoas repetindo o famoso bordão “liga nada a lugar nenhum” \textemdash\ expressão que chegou a ser colocada até numa reportagem da edição brasileira do periódico espanhol El País \textemdash, que até a chegada da Linha 4-Amarela também amaldiçoou a Linha 5–Lilás (então Capão Redondo-Largo Treze), colocando a Linha 9-Esmeralda, bem como as centralidades e pontos de interesse por ela atendidos, num verdadeiro limbo. Pior ainda: não raramente quem vive na periferia adere ao discurso, passando a se marginalizar e marginalizar seu local de residência, ainda que talvez não tenha consciência.
+
+\subsection{Críticas vagas envolvendo a Linha 12-Safira}\index{Linha 12-Safira}
+
+Ainda dentro do tema de como as regiões atendidas pela Linha 13 estão sendo enxergadas, identificamos que blogs manifestaram insatisfação com o nível de serviço da Linha 12-Safira. Foi o caso do Metrô CPTM, que opinou da seguinte maneira (grifo nosso):
+
+\begin{citacao}
+	Na verdade, sua ligação ao restante da rede metroferroviária feita pela Linha 12-Safira é que tira parte da atratividade em usá-la. Exceto pelos trens que seguirão para Brás e também para Luz (com tarifa de R\$ 8 anunciada hoje), os demais pararão na distante estação Engenheiro Goulart onde seguirão viagem pela Linha 12, \textbf{uma das mais precárias da CPTM}.
+\end{citacao}
+
+Entretanto, o autor, Ricardo Meier, em nenhum momento descreve ou fornece referências para enriquecer os pontos que coloca. Por exemplo, ao afirmar que a Linha 12-Safira é precária, não fica claro o que ele pretende insinuar.
+
+Seria a infraestrutura das estações? Exceto pelas estações de Itaquaquecetuba, todas as outras são novas (inauguradas pelo menos na segunda metade dos anos 2000) ou suficientemente atuais, como é o caso da Estação Tatuapé, de 1981.
+
+Seria o intervalo? Durante a permanência do COMMU nas estações Engenheiro Goulart e Tatuapé, não foram observados intervalos insatisfatórios: a linha aparentava estar operando dentro da média de um trem a cada 8 minutos, justamente a esperada para um sábado sem obras, no período das 4h às 19h. A tabela completa com os intervalos da Linha 12-Safira pode ser consultada aqui.
+
+%TODO reproduzir tabela de intervalos aqui
+
+Parece um exercício de crítica genérica pela crítica genérica: a repetição de um estigma ou uma crítica muito generalista, o que no final das contas acaba contribuindo para marginalizar a CPTM, seus passageiros e as regiões atendidas.
+
+\subsection{Planos para expansão}
+
+Ao confinar a Linha 13-Jade na Estação Engenheiro Goulart, sua atratividade segue drasticamente reduzida. Exceto pelo Parque Ecológico do Tietê, cujo acesso finalmente foi facilitado com a nova estação, não existe nenhum outro atrativo. A estação está localizada numa área periférica da Zona Leste e os subcentros regionais mais próximos são Tatuapé (no sentido centro) e São Miguel Paulista (no sentido bairro), sendo que o acesso a eles, bem como a qualquer outra estação da rede de trilhos, exigirá que o passageiro utilize a Linha 12-Safira (Brás-Calmon Viana), que por sua vez, termina nas proximidades do Largo da Concórdia, não chegando nem mesmo no Centro Velho.
+
+Elenco os seguintes problemas imediatos:
+
+\begin{itemize}
+	\item Infraestrutura hoteleira deficiente, pois o Tatuapé permanece incipiente como centralidade de negócios (o hotel mais próximo da estação homônima não ficou pronto ainda e o segundo mais próximo não tem acesso cômodo);
+	\item Saturação elevada de todo o tronco ferroviário pesado da Zona Leste devido à pendularidade (muito lotado no sentido centro pela manhã, muito lotado no sentido bairro pela tarde);
+	\item Falta de confiabilidade e previsibilidade nos acessos rodoviários existentes para a parcela que precisa utilizar vias como a Marginal Tietê, uma vez que a última obra realizada nela não considerou qualquer meio coletivo de transporte, sobre trilhos e/ou sobre pneus;
+	\item Falta de operações especiais na Linha 12-Safira, o que significa que os trens superlotam em estações ainda mais periféricas e o embarque em estações como USP Leste e Engenheiro Goulart já é difícil hoje.
+\end{itemize}
+
+Planos para expansão da Linha 13-Jade já existem, mas os ânimos devem ser contidos até 2016, pelo menos. Num olhar otimista, poderemos ver algum progresso em relação ao tema por volta de 2020. Em setembro de 2013 o Governo do Estado anunciava intenções de expandir o atendimento na cidade de Guarulhos, conforme trecho da notícia “Governo diz que Linha 13 da CPTM irá além do aeroporto de Guarulhos”:
+
+\begin{citacao}
+	O projeto do novo trecho está sendo estudado. Ainda não há definição, por exemplo, do número de estações e do traçado. “A extensão é para o futuro. Porque o trem não vai entrar no aeroporto. O trem vai abraçar o aeroporto, ele vai dar a volta por fora em direção à Vila São João”, informou o secretário, que participou nesta manhã de um evento em Guarulhos. “Se a gente fizer essa linha uma concessão ou uma PPP [parceria público-privada], vai estar contida nesta PPP a extensão para a Vila São João”, afirmou.
+\end{citacao}
+
+Para se ter uma ideia de quão limitada a linha nascerá, a CPTM só prevê um incremento considerável na demanda de passageiros no quinto ano de operação, conforme podemos verificar no slide 18 de uma audiência pública, reproduzido na \autoref{fig:slide_inicio_l13}:
+
+\begin{landscape}
+\begin{figure}[h]
+	\centering
+	\caption[Slide de apresentação sobre a Linha 13-Jade]{Slide 18 de uma apresentação assinada pelo engenheiro Luiz Alfredo Amorim Jr., usada numa audiência pública sobre a Linha 13}
+	\includegraphics[width=21cm]{slide_inicio_l13}
+	\label{fig:slide_inicio_l13}
+\end{figure}
+\end{landscape}
+
+% http://www.cptm.sp.gov.br/licitacoes/AudienciaPublica/Arquivos/APRESENTACAO_AUD_PUBL_LINHA%2013%20JADE_VF.pdf
+
+Para a Linha 13-Jade, algum otimismo em relação à expansão pode ser justificado pelo fato de existir espaço na faixa de domínio da Linha 12-Safira, ou seja, a implantação de estações em superfície, como a futura Tiquatira, importante pela conexão também futura com a Linha 2-Verde, não deverá impor grandes desafios à CPTM.
+
+Em informações obtidas com base na Lei Federal nº 12.527/2011, o investimento total será de R\$ 1,8 bilhão. O intervalo médio inicialmente previsto será de 8 minutos e poderá diminuir para até 3 minutos conforme a evolução da demanda, que está projetada para as estações da seguinte forma:
+
+\begin{itemize}
+	\item Aeroporto-Guarulhos: 40 mil passageiros por dia;
+	\item Guarulhos-CECAP: 36 mil passageiros por dia;
+	\item Engenheiro Goulart: 76 mil passageiros por dia.
+\end{itemize}
+
+Com relação à intermodalidade Trem Metropolitano-ônibus em Guarulhos, a CPTM informou o seguinte:
+
+\begin{citacao}
+	A CPTM trata com a prefeitura local para a questão da integração. Esta só ocorre se houver interesse do município. Os estudos de remanejamentos de linhas municipais, obviamente, é de responsabilidade dos municípios.
+\end{citacao}
+
+Até a publicação deste livro não há integração tarifária entre os ônibus municipais guarulhenses e a Linha 13-Jade, exigindo o pagamento de duas tarifas cheias, entretanto, faltando três dias para a operação assistida da Linha 13, foram criadas linhas de ônibus em Guarulhos com foco no atendimento de pacientes, todas atendendo o Terminal Metropolitano Taboão e, portanto, conectadas à Linha 13-Jade. São elas: 356A, 356B, 717A e 717B, conforme informações do Guarulhos Hoje\footnote{\url{https://www.guarulhoshoje.com.br/2018/03/28/prefeitura-cria-quatro-linhas-de-onibus-com-itinerario-exclusivo-para-unidades-de-saude/}}.
+
+\subsection{Conclusão}
+
+%TODO atenção para citação de outro artigo do COMMU
+
+Infelizmente a Linha 13-Jade nasce com sérias limitações, dependendo excessivamente da Linha 12-Safira, o que lhe atribui pouca versatilidade em termos de conexões com a rede de trilhos, além disso, tem horizonte de expansão nebuloso, que se agrava pela também nebulosa conectividade com os terminais 1, 2 e 3 do GRU Airport.
+
+É lamentável que o maior aeroporto brasileiro possua a rodovia como único elo entre ele e a metrópole, mas é ainda mais lamentável que se desenhe uma linha tão tacanha para conectá-lo com a malha metroferroviária. A Linha 13-Jade nasce aquém das necessidades não só da capital paulista, mas também de Guarulhos e de outras cidades da Região Metropolitana de São Paulo.
+
+O Governo do Estado demonstrou, mais uma vez, ser pouco visionário e ter um compromisso questionável com a busca por uma rede de alta e média capacidade de excelência.
+
+Não temos dúvidas de que, para a imensa maioria, o impacto da Linha 13-Jade será muito pequeno, apesar dos quase R\$ 2 bilhões que serão gastos para tirá-la do papel.
+
+Como exposto, trata-se de uma ligação bastante limitada, com previsão de demanda tímida e que precisa ser expandida para fornecer um atendimento mais robusto.
+
+A Linha 13-Jade, por bem ou por mal, não deixa de ser interessante para mostrar \textemdash\ escancarar, cá pra nós \textemdash\ que há um longo caminho a ser percorrido quando vamos discutir sobre transporte público e a metrópole, tanto que, às vésperas de sua entrega, os artigos da Linha 13 apresentaram um aumento expressivo nos acessos no Medium do COMMU, apesar de não estarem sendo divulgados há meses (algo como uns 300 acessos por dia na última semana de março de 2018, considerando o artigo ``Linha 13-Jade: uma ligação para Guarulhos que já nasce limitada'').
+
+\begin{info}
+	\infocaio{01/04/2018}{http://bit.ly/linha13capenga}
+\end{info}
+
+\begin{obs}
+	\textbf{Observação:} parte do artigo ``Linha 13-Jade: uma ligação para Guarulhos que já nasce limitada'' foi mesclado, de maneira a concentrar as informações sobre a Linha 13 num único capítulo e seção. O original pode ser acessado em \url{https://goo.gl/eMG1JQ}
+\end{obs}
+
+\section{Estação Lapa}
+
+Mesclar artigos sobre enterramento.
+
+\section{Estação Guaianazes}\index{Estação Guaianazes}\index{Linha 11-Coral}
+
+\subsection{Introdução}
+
+A única ligação expressa da Zona Leste e com quase 16 anos de existência, segue repleta de limitações e descumprindo antigas promessas e anseios. Para se ter uma ideia, a inauguração da Estação Suzano foi adiada pela pelo menos nove vezes\footnote{\url{http://www.portalnews.com.br/_conteudo/2016/01/cidades/22919-estado-atrasa-novamente-entrega-e-seqer-tem-data-para-chefa-do-expresso.html}}, embora o contrato, que deveria durar 15 meses, tenha sido assinado em outubro/2010. Como não cutucar a ferida do Expresso Leste, parte da Linha 11-Coral (Luz-Guaianazes-Estudantes) da Companhia Paulista de Trens Metropolitanos?
+
+O Expresso Leste hoje é um trecho com 24 km na Linha 11, no qual o passageiro desfruta integralmente de trens com ar condicionado, baixos intervalos (nos picos, um trem a cada quatro minutos em média) e estações mais modernas, numa ligação paralela à Linha 3-Vermelha (Barra Funda-Itaquera) da Companhia do Metropolitano, sendo o único serviço expresso sobre trilhos da Zona Leste e também de toda a malha de trilhos da Região Metropolitana de São Paulo.
+
+%TODO desenhar diagrama atual do Expresso Leste, usando o Gravit
+
+A diferença com relação à Linha 3 é imediata: a partir de Itaquera, o trens do Expresso Leste fazem parada apenas nas estações Tatuapé, Brás e Luz, sendo que esta última atualmente funciona como terminal, embora não seja uma estação adequada para tal finalidade (falaremos um pouco mais sobre isso na seção “São Paulo: poucas palavras sobre a Barra Funda”).
+
+\subsection{Alto Tietê: novas estações, velhas questões}
+
+Recentemente as estações do trecho outrora chamado de Banda B pela CPTM estão em reconstrução, algumas delas sendo reconstruídas do zero, caso da Estação Suzano, mencionada no início do artigo. A Banda B é a extensão da Linha 11-Coral, ou seja, o trecho posterior à Estação Guaianazes no sentido da Estação Estudantes
+
+%TODO desenhar diagrama atual da Banda B, usando o Gravit
+
+O trecho Guaianazes-Estudantes, que ainda conta com um serviço inferior ao oferecido no Expresso Leste, apesar de algumas melhorias, como a aposentadoria dos antigos trens da década de 1960, responde por 27 km dos 51 km da Linha 11. São oportunos os seguintes comentários a respeito de quatro de suas dez estações:
+
+\begin{itemize}
+	\item Guaianazes: inaugurada em 2000, foi construída pelo Metrô e não previa integração tarifária com os ônibus, se encontrando totalmente saturada e não contando com escadas rolantes e elevadores, apenas rampas;
+	\item Ferraz de Vasconcelos: foi a primeira estação reconstruída a ser inaugurada, após ficar anos em obras, assim como no caso de Suzano e as outras estações, os atrasos chegaram a três anos;
+	\item Calmon Viana: foi a primeira estação modernizada a ser inaugurada, em outubro de 2010, muito mais no contexto de transformação que a Linha 12-Safira (Brás-Calmon Viana) vinha sofrendo do que numa ação realmente ligada à Linha 11-Coral;
+	\item Suzano: é a maior estação da CPTM no Alto Tietê, sendo prevista a expansão da Linha 12-Safira até ela, de forma a reduzir a saturação da Estação Calmon Viana, que apesar de ter sido modernizada, permanece não tendo grande capacidade, inclusive, o projeto da nova Estação Suzano foi um dos vencedores do Prêmio AsBEA 2012\footnote{\url{http://arcoweb.com.br/projetodesign/especiais/premio-asbea-2012-premiados-projetos-nao-edificados-01-12-2012}}, o que com certeza mostra que não estamos falando de uma estação qualquer.
+\end{itemize}
+
+A mudança no caráter das estações tem contribuído para reduzir o contraste entre o serviço prestado na capital pelo Expresso Leste e pela extensão da Linha 11 no Alto Tietê, por isso, é natural esperar mudanças nas viagens entre o Alto Tietê e a capital, porém, como tudo envolvendo a CPTM, a espera foi bastante longa. Em 29/01/2016, o presidente da CPTM ventila ao blog Via Trólebus\footnote{\url{http://viatrolebus.com.br/2016/01/cptm-quer-aumentar-viagens-do-expresso-leste/}} a possibilidade de aumentar as viagens diretas:
+
+\begin{citacao}
+	Foram adquiridos 65 novos trens, em dois lotes. Do primeiro lote, já recebemos nove trens, que estão em fase de testes. Dependendo da entrega dessas composições, vamos começar a incrementar a frota e avaliar a questão da ampliação do Expresso Leste. De imediato, estamos estudando um incremento de 10\% a 20\%. Mas está em processo de estudo”, disse o presidente da CPTM. Hoje o Expresso Leste opera com 24 viagens diárias em dias úteis, sendo 12 em cada sentido.	
+\end{citacao}
+
+Contudo, é preciso ter serenidade antes de se animar com a possibilidade de não precisar baldear em Guaianazes, pois existem duas coisas que precisam ser pensadas hoje, além dos atrasos costumeiros e inaceitáveis:
+
+\begin{enumerate}
+	\item A CPTM pode enfrentar dificuldades em ampliar as viagens no município de Mogi das Cruzes, visto que a existência de múltiplas passagens de nível dificulta a operação de uma linha que já está com intervalos de metrô e tem previsão de intervalos ainda menores no longo prazo (e do antigo projeto “Novo Centro”\footnote{\url{http://saopaulotremjeito.blogspot.com.br/2012/02/projeto-novo-centro-de-mogi-das-cruzes.html}}, está em obras apenas o túnel na Praça Sacadura Cabral, na frente da Estação Mogi das Cruzes);
+	\item As dificuldades em Mogi das Cruzes reforçam que a Estação Suzano nasce para ser terminal tanto da Linha 11-Coral, quanto da Linha 12-Safira, de forma que o serviço para Mogi das Cruzes operaria na forma de uma extensão operacional com apenas quatro estações (vale lembrar que no passado a CPTM chegou a propor a construção de uma linha de metrô leve, com o uso de bondes modernos, os chamados VLTs ou Veículos Leves sobre Trilhos, a qual não foi adiante).
+\end{enumerate}
+
+%TODO ver como faço com a questão de Mogi, mas provavelmente vou jogar na próxima seção
+
+\subsection{São Paulo: poucas palavras sobre a Barra Funda}\index{Estação Palmeiras\textperiodcentered Barra Funda}
+
+Nossas primeiras críticas à Estação Luz, realizadas no artigo “Março e a Estação Luz, mês de um aniversário inglório”, merecem novos reforços, pois há anos a levada do Expresso Leste para a Estação Barra Funda é ventilada, sem qualquer previsão de quando vai acontecer, ao passo que a Estação Luz segue como retrato do descaso, com uma infraestrutura essencialmente centenária, incapaz de ser terminal de qualquer linha de metrô (a estação foi concebida para ser de passagem e de trens de longa distância, não terminal serviços metropolitanos com milhares de passageiros desembarcando a cada 5 minutos).
+
+Uma rápida pesquisa revela que o assunto não é novo:
+
+\begin{itemize}
+	\item Via Trolebus, 28/05/2015: Expresso Leste da CPTM completa 15 anos\footnote{\url{http://viatrolebus.com.br/2015/05/expresso-leste-da-cptm-completa-15-anos/}}
+	\item Via Trolebus, 28/07/2014: Expresso leste partiu da Barra Funda para atender a palmeirenses\footnote{\url{http://viatrolebus.com.br/2014/07/expresso-leste-partiu-da-barra-funda-para-atender-a-palmeirenses/}}
+	\item CPTM em Foco, 26/03/2012: Qual a vantagem de ter o Expresso Leste em Palmeiras-Barra Funda?\footnote{\url{http://cptmemfoco.blogspot.com.br/2012/03/qual-vantagem-de-ter-o-expresso-leste.html}}
+	\item CPTM em Foco, 16/03/2012: Expresso Leste em Palmeiras-Barra Funda ainda nesse semestre\footnote{\url{http://cptmemfoco.blogspot.com.br/2012/03/expresso-leste-em-palmeiras-barra-funda.html}}
+\end{itemize}
+
+Admito que no passado realmente faltavam vias entre a Luz e a Barra Funda para permitir uma utilização exclusiva (necessária para manter bons níveis de confiabilidade, além de viabilizar intervalos na casa dos 3 minutos) pelos trens da Linha 11-Coral, porém, obras foram realizadas e com a implantação de mais vias, que seguem subutilizadas desde então, as desculpas têm se voltado aos subsistemas de energia e sinalização, sem qualquer postura clara de quando deixarão de existir impeditivos.
+
+A Estação Barra Funda, ainda que tenha uma infraestrutura que não envelheceu bem, é muito mais versátil do que a centenária Estação Luz, uma comparação seria simplesmente covardia; intervenções para melhorar a infraestrutura atual são muito mais fáceis e baratas, visto que não se trata de um imóvel tombado e ainda existem vãos no mezanino, espaços abertos sobre as plataformas que podem receber novas rampas de acesso, entre outras modificações visando melhorar o conforto e a capacidade da estação. Terminar a Linha 11 na Barra Funda pode significar, em conjunto com mais trens e uma redução nos intervalos, em um maior equilíbrio para a Linha 3-Vermelha, atualmente palco de humilhações diárias na Estação Brás, uma das transferências mais críticas entre os trens do Metrô e da CPTM.
+
+Caso o Governo do Estado decida viabilizar o enterramento dos trilhos, também não seria exagero projetar uma expansão do Expresso Leste até a Estação Água Branca, futuro hub ferroviário de trens intercidades que ligarão a capital ao interior do estado, porém, dada a estagnação da questão, algo precisa ser feito ainda no médio prazo para garantir a segurança e o conforto dos passageiros, cujas vidas não são estáticas e não podem ser comprometidas pela ingerência do poder público.
+
+\subsection{Conclusão}
+
+É lamentável que o único serviço expresso existente tenha um horizonte de pouco otimismo pela frente. A participação social permanece aquém do ideal na CPTM, bem como a transparência. Com obras demoradas e injustificavelmente atrasadas (um atraso de três anos para inaugurar uma estação em superfície, com baixa complexidade em comparação com uma obra em subterrâneo, como no caso de Ferraz de Vasconcelos, simplesmente é inaceitável e inconcebível), o passageiro do Expresso Leste não tem qualquer garantia de um futuro melhor.
+
+Reduzir intervalos, melhorar a atratividade da linha para reduzir as viagens que hoje estão sobrecarregando a baldeação na Estação Brás, oferecer mais serviços diretos para equilibrar a baldeação na Estação Guaianazes, expandir a linha até a Zona Oeste da capital de forma a melhorar sua conectividade e funcionalidade, tudo isso é básico e já deveria ter sido feito ou, no mínimo, estar em andamento com um cronograma público e rigorosamente cumprido.
+
+\begin{info}
+	\infocaio{31/01/2016}{http://bit.ly/FalarExpLeste}
+\end{info}
+
+\section{Estação Antônio João}
+
+\subsection{Introdução}
+
+A Estação Antônio João surgiu em 1941 pela então Estada de Ferro Sorocabana, sendo que a estrutura atual da estação, hoje propriedade da Companhia Paulista de Trens Metropolitanos, é basicamente a mesma desde a década de 1980. Está situada na cidade de Barueri, sub-região oeste da Grande São Paulo, sendo atendida diariamente pelos trens da Linha 8-Diamante (Júlio Prestes-Itapevi-Amador Bueno).
+
+A estação tem passado por um processo de anacronismo, relacionado por transformações não só nos serviços da CPTM, como também na região em que está inserida (Aldeia de Barueri). Antônio João, cada vez mais, mostra ser uma estação que estagnou e cujas formas e ambiente refletem uma realidade que há muito deixou de existir.
+
+\subsection{Cronologia}
+
+Acompanhe a seguir uma série de acontecimentos relevantes, todos a partir do novo milênio:
+
+\begin{itemize}
+	\item 2003/2004: Inaugurado viaduto sobre a estação Antonio João, eliminado a passagem de nível existente;
+	\item 2005: CPTM contrata estudos sobre Antonio João;
+	\item 2006: CPTM contrata o escritório Costa Lima Arquitetura e a empresa Concremat para realizar um projeto de reconstrução da estação;
+	\item 2007: em audiência pública em junho, a CPTM anuncia que vai licitar a reconstrução da estação no triênio 2007–2010;
+	\item 2009: com um custo de R\$ 30 milhões, a prefeitura de Barueri assina um convênio para custear as obras de reconstrução;
+	\item 2009: a empresa CSU, ligada ao ramo de processamento de transações eletrônicas e contact center, inaugura sua unidade ao lado da estação Antonio João, sendo considerado o maior call center da América Latina;
+	\item 2010: o prefeito de Barueri cancela o convênio pois queria que a CPTM investisse 30 milhões na reconstrução da estação Barueri a oeste da atual. A CPTM investiu cerca de R\$ 14 milhões na reforma das instalações atuais;
+	\item 2011: em novembro, é inaugurado ao lado da estação o parque Shopping Barueri, com 37,4 mil m$^{2}$ de área bruta locável, segundo o G1;
+	\item 2012: CPTM contrata Engevix para refazer projeto da estação. EMTU projeta um terminal metropolitano (ligado a um BRT que ligaria a região de Alphaville com Cajamar) ao lado de Antonio João;
+	\item 2014: empresa administradora do shopping elabora projeto de nova estação.
+\end{itemize}
+
+\subsection{Panorama da estação}
+
+Logo de cara, percebemos que o vão entre o trem e a plataforma é simplesmente imenso, em seguida, percebemos que a cobertura das duas plataformas existentes é exígua, sendo incapaz de cobrir metade do trem, ou seja, quatro dos oito carros que compõem cada trem que circula no trecho Júlio Prestes-Itapevi, depois, vemos que a estação permite a entrada de poucas pessoas ao mesmo tempo, já que foi dimensionada para uma demanda baixíssima, por fim, notamos que sua inserção é deficiente e que não há transferência entre os sentidos.
+
+O edifício da CSU pode ser visto da estação, causando um misto de impacto e contraste, a estação parece simplesmente fora do lugar, perdida em nossa época, além disso, o aspecto da via permanente contribui, transmitindo desleixo por parte do poder público estadual. Com poucos seguranças presentes (todos terceirizados), não tivemos problemas em registrar as imagens.
+
+Não fosse pela chegada da CSU, talvez Antônio João continuasse exibindo um certo ar bucólico, mas não se engane, com a chegada do viaduto, cerca de dez anos atrás, aqueles que nele transitavam passaram a ter uma visão privilegiada de empreendimentos corporativos na região de Alphaville, ou seja, já havia, pelo menos, um potencial para que Antônio João atuasse como uma espécie de hub (concentrador), com destaque para a intermodalidade (integração entre diferentes modos de transporte).
+
+\subsection{Panorama do entorno}
+
+O entorno da estação infelizmente tem problemas. O acesso ao viaduto é feito por uma escada metálica, que não tem uma aparência das mais simpáticas. A CPTM disponibiliza uma passagem de nível na estação, intencionada principalmente para utilização por deficientes físicos, que permite passar de um lado para o outro, o que remedia a situação de forma bastante precária, até porque a maioria acaba utilizando a passagem de nível, o que fica bastante evidente nos horários da maior movimento da linha de ônibus T245VP1 (Estação Antônio João-18 do Forte) da Benfica BBTT.
+
+Vale notar que apenas em 2006\footnote{\url{http://www.barueri.sp.gov.br/sistemas/informativos/informativo.asp?id=6001}} a Prefeitura de Barueri concluiu a pavimentação nas imediações do acesso localizado na plataforma sentido Júlio Prestes da estação:
+
+\begin{citacao}
+	Na Aldeia de Barueri, o bairro está recebendo os últimos serviços de conclusão das vias do novo Centro Empresarial, em frente à estação Antônio João da CPTM. A avenida General de Divisão Pedro Rodrigues da Silva foi ampliada e ganhou uma rotatória.
+\end{citacao}
+
+Não significa, porém, que tenha estabelecido uma ligação rodoviária margeando os trilhos. Tapumes e cones estão presentes. A lama deu lugar a uma avenida incompleta.
+
+Na mesma rua do viaduto (General de Divisão Pedro Rodrigues da Silva), existe um semáforo que permite acesso ao Parque Shopping e ao ponto de ônibus situado próximo do centro comercial. Seu tempo de abertura e fechamento claramente prioriza o automóvel. Levando em consideração a utilização ``torta'' da passagem de nível devido às carências infraestruturais da Estação Antônio João, a maneira mais fácil de acessar o shopping para quem chega sentido Júlio Prestes é cruzar a passagem de nível e utilizar a calçada da face da estação sentido Itapevi, seguindo em frente, pois há um segundo acesso do Parque Shopping Barueri para pedestres, que inclusive é coberto e iluminado.
+
+Notoriamente essa região continua não sendo projetada com o pedestre em mente. O pedestre perde um bom tempo para atravessar de um lado ao outro se agir corretamente, esperando o semáforo, além disso registramos casos de pedestres que se arriscavam para chegar mais rápido ao outro lado em meio aos carros em movimento. Para finalizar, na larga avenida não encontramos uma faixa exclusiva de ônibus ou mesmo uma ciclovia, o que não causou surpresa alguma, uma vez que os pontos de ônibus existentes são pequenos para a demanda gerada pelo polo de comércio e serviços que hoje se encontra instalado.
+
+\subsection{Conclusão}
+
+A Estação Antônio João retrata perfeitamente os descompassos da CPTM na modernização dos serviços de metropolitano que atendem diversas localidades na Região Metropolitana de São Paulo.
+
+Uma grande oportunidade permanece sendo negligenciada: a estação poderia servir como um hub intermodal na região, algo que fica reforçado com o projeto da EMTU para um corredor de ônibus intermunicipais do tipo BRT (Bus Rapid Transit), para tanto, é preciso reconstruí-la por completo, garantir um projeto integrado, que contemple integração com outros modos de transporte (como ônibus municipais e intermunicipais, além de automóveis, que poderiam ser deixados no local) e preze pela boa inserção naquele tecido, qualificando um espaço que transmita níveis superiores de conforto e dignidade.
+
+Não podemos esperar mais dez anos para, novamente, sermos desrespeitados com mau uso do dinheiro público e ausência de providências.
+
+\begin{info}
+	\infocaio{17/08/2015}{https://goo.gl/gGmaFz}\\
+	\textbf{Agradecimentos:} Ivo Ramos (levantamento cronológico); Daniele Almeida e Márcio Henrique (colaboração/revisão)
+\end{info}
+
+\section{Estação Estudantes}
+
+Mesclar artigos sobre o tramo mogiano da Linha 11.
+
+\section{Estação Mauá}
+
+Utilizar artigo do Expresso ABC. Talvez mesclar com um ou outro artigo que detalha a questão de expressos.
+
+\section{Estação Berrini}\label{s:brr}\index{Estação Berrini}
+
+\subsection{Vizinhança gentrificada}
+
+\begin{wrapfigure}{l}{0.25\textwidth}
+	\caption{Mapa da Linha 9 na Estação Berrini (2016)}
+	\includegraphics[width=0.9\linewidth]{20160128_170648.jpg}
+\end{wrapfigure}
+
+\cite[pág. 13]{Ferreira} explica que a partir dos anos 1970 o setor industrial localizado no centro metropolitano perdeu importância, de forma que o setor terciário, muito menos concentrado e homogêneo no território, absorveu sua mão de obra, o que se traduz em menor polarização, novas localizações (o autor cita shoppings centers e centros empresariais, por exemplo) e alterações significativas no uso do solo \cite[pág. 25]{Ferreira}, o que pode ser relacionado com o processo de rentismo urbano sublinhado por \cite[pág 30, nota de rodapé 2]{Acselrad}, no qual ocorre gentrificação estratégica de áreas urbanas outrora industrializadas e marcadas pelo desinvestimento. A gentrificação se dá a partir das possibilidades econômicas, tanto para valorização, como para aquisição de propriedades imobiliária, num processo que exclui moradores de menor renda \cite[pág. 28-29]{Acselrad}. O trecho central da Linha 9-Esmeralda, que avança ao longo da Avenida das Nações Unidas por regiões enobrecidas e substancialmente modificadas pelo processo, é emblemático, não pode por se encaixar no fenômeno que acaba de ser descrito, como também pela extensão do território afetado, que pode ser observado utilizando as estações da CPTM como referência, visto que não há, exceto pela Linha 4-Amarela da \gls{cmsp} em regime de concessão patrocinada, outra infraestrutura de transporte de alta capacidade. As estações são: Hebraica\textperiodcentered Rebouças, Cidade Jardim, Vila Olímpia, Berrini e Morumbi.
+
+\begin{landscape}
+\begin{figure}[h!]
+	\centering
+	\caption{Visão dos empreendimentos imobiliários a partir da plataforma da Estação Cidade Jardim (2013} \index{Estação Cidade Jardim}
+	\includegraphics[keepaspectratio,width=19cm]{DSCN2007.JPG}
+\end{figure}
+\end{landscape}
+
+\begin{landscape}
+\begin{figure}[h!]
+	\centering
+	\caption{A Estação Cidade Jardim é vizinha de um dos edifícios residenciais mais caros da capital paulista (2013). Fonte: \cite{apecaro}} \index{Estação Cidade Jardim}
+	\includegraphics[keepaspectratio,width=19cm]{DSCN2000.JPG}
+\end{figure}
+\end{landscape}
+
+\cite[pág. 201]{Frugoli} destaca a pressão e o desejo de um ator ligado à iniciativa privada com relação à Linha 9, ainda antes do término de sua dinamização, que resultou, sobretudo, na construção e inauguração das estações Hebraica-Rebouças, Cidade Jardim, Berrini, Morumbi, Granja Julieta, Socorro e Vila Olímpia\cite[pág. 38]{Ferreira}: ``"\textemdash\ A linha de metrô está pronta. Está aí no Rio Pinheiros, a linha de trem. Não sei por que, até agora, as nossas "autoridades"\dots Eu acho que os caras não têm visão nenhuma, é uma coisa impressionante. É só fazer algumas estações e está pronta. Não, eles vão fazer, mas só quando fizerem a da Rebouças. Faz já! (Entrevista com Carlos Bratke, cit.)''.
+
+Carlos Bratke, como explica \cite{Frugoli}. exibe perfeitamente os efeitos descritos por \cite{Acselrad}. criticando o poder público, ao mesmo tempo que também demonstra que não era incomodado pela prefeitura ou pelo governo estadual, atuando livremente na Avenida Engenheiro Luís Carlos Berrini:
+
+\begin{citacao}
+	As declarações dos irmãos Bratke e matérias da grande imprensa ao longo das últimas décadas ajudam a tecer um quadro que frisa um caráter de "pioneirismo" e "autonomia" quanto ao poder público:
+	
+	\begin{citacao}
+		No espaço de dez anos, [Carlos Bratke, Roberto Bratke e Francisco Collet] operaram em volta da Avenida Luiz Carlos Berrini, sem a mais remota interferência da prefeitura ou de qualquer poder público, uma pequena revolução urbana \textemdash\ a mais notável já feita num grande espaço da cidade por um único projeto privado de arquitetura. (Veja SP, 1985:16)
+	\end{citacao}
+	
+	Na mesma matéria, Carlos Bratke afirma: "Nunca fui procurado por nenhum órgão público para saber quais são os meus planos" (Veja SP, 1985:21).
+	
+	\begin{citacao}		
+		"Essa avenida não é um planejamento urbano. Precisavam fazer um canal, então fizeram essa avenida que ligava nada a coisa nenhuma [\dots] Nessa avenida era tudo abandonado, um brejo. Saímos de pastinha na mão, visitando os amigos e convencendo-os a aplicarem o dinheiro no nosso projeto. Falamos com mais de 200 pessoas e tomei muito chá de cadeira que conseguimos construir o primeiro prédio comercial. Arborizamos a região e valorizamos o metro quadrado de 200 para 5 mil dólares. Já fizemos 30. Estamos fazendo mais trinta. (apud Gabaglia, 1990:s.p.)
+	\end{citacao}
+	
+	Outras críticas ao poder público foram coletadas na entrevista que concedeu:
+	
+	\begin{citacao}
+		\textemdash\ Eu acho que a cidade de São Paulo está constituindo espontaneamente o que os administradores já deviam ter feito há muito tempo: dividir a cidade em vários pólos! [\dots] O zoneamento aqui[região da Berrini] é a coisa mais absurda, anacrônica e idiota que pode existir, mas está acontecendo praticamente numa outra regulamentação. Infelizmente, porque o zoneamento, que já nasceu errado, acabou indo parar nas mãos dos vereadores e não de uma comissão técnica de revisão, nunca foi revisto de uma maneira global, e tem sido alterado ao sabor dos interesses "políticos" dos vereadores. (Entrevista com Carlos Bratke, cit.)
+	\end{citacao}	
+\end{citacao}
+
+\begin{figure}[h]
+	\caption{Visão dos empreendimentos imobiliários a partir da plataforma da Estação Berrini (2016)}
+	\includegraphics[keepaspectratio,width=\textwidth]{20160128_170544_HDR.jpg}
+\end{figure}
+
+O Trem Metropolitano, no caso da Linha 9-Esmeralda é interessante por dialogar tanto com a Berrini, como outras avenidas similares (em termos de ocupação do solo), como a Chucri Zaidan (Estação Morumbi) ou ainda, conjuntos de ruas e avenidas, como Funchal, Olimpíadas e Dr. Cardoso de Melo (Estação Vila Olímpia), as sete estações do miolo da Linha 9-Esmeralda, todas já mencionadas anteriormente, foram projetadas por Luiz Carlos Esteves, a respeito delas, destaco numa notícia de 22 de junho de 1998 os seguintes fragmentos:
+
+\begin{citacao}
+	Até o final de setembro, a população que freqüenta alguns dos edifícios comerciais mais modernos da cidade, situados na avenida das Nações Unidas, zona sul paulistana, vai passar a contar com uma opção de transporte coletivo. Trata-se das sete novas estações de trem que a CPTM (Companhia Paulista de Trens Metropolitanos) está instalando entre as estações Pinheiros e Largo 13, pertencentes à linha C, que liga Osasco a Jurubatuba.
+	
+	[\dots]
+	
+	Luiz Esteves, arquiteto da Harza Hidrobrasileira Engenharia e Projetos, empresa responsável pela concepção e projetos de dinamização da linha Sul, aponta a segurança do usuário como um dos pontos de maior importância das novas estações. “Colocamos a área de bilheteria e catracas junto da calçada dos prédios. Dessa forma, a passarela que leva à plataforma de embarque, do outro lado da marginal, se torna uma área pagante, o que inibe a ação de delinqüentes”, explica.
+	
+	Outro fator que norteou o projeto, segundo Esteves, foi o urbanismo da região. “Evitamos interferir com o landscape da avenida, projetando estruturas leves e transparentes.” Componentes metálicos fechados com vidro e brises de alumínio garantiram a leveza necessária. O concreto aparece apenas em alguns momentos da estrutura, como a caixa onde serão instaladas duas escadas rolantes, uma escada fixa e um elevador para deficientes. A passarela sobre a marginal também será construída em metal, na forma de uma elipse.
+	(\cite{trembom})
+\end{citacao}
+
+Na altura, o investimento mencionado foi de US\$ 220 milhões, além disso, Esteves também deu detalhes das estações, então uma novidade. Por se tratar de uma notícia produzida por um periódico especializado em arquitetura, é interessante observarmos que os edifícios da região são enaltecidos ainda antes de introduzir detalhes do investimento feito pelo poder público, a partir daí, vale mencionar que, conforme \cite{Nobre}:
+
+Conforme \cite[pág. 145]{Nobre} a ``associação de promotores imobiliários e investidores corporativos, principalmente os fundos de pensão, permitiu a captação de excedentes de capitais e de poupança que puderam ser desviados para a promoção imobiliária dos megaempreendimentos, criando um grande crescimento desse setor do mercado.''\cite{Nobre}, sendo ainda explicado que a maioria dos empreendimentos ficaram concentrados no Setor Sudoeste da capital paulista em função da estrutura urbana segregada da cidade.
+
+\subsection{Alguns dados}
+
+Conforme dados do \cite{ibgeXSP}, São Paulo tem uma população de 11.253.503 habitantes e possui um território com 1.521.110 km$^2$, atendido por 46 estações\cite{sitecptm1}, das quais 5 foram tratadas aqui (10,9\% do total de estações da \gls{cptm} no município), ainda que de forma mais indireta, principalmente em comparação com a subseção sobre a Linha 8-Diamante.
+
+\begin{center}
+	\begin{longtable}{|l|l|l|l|l|l|}
+		\caption{Demanda do grupo de estações da Linha 9\, baseado em Mídia CPTM}\\
+		\hline
+		\textbf{Média} & \textbf{Hebraica\textperiodcentered Rebouças} & \textbf{Cidade Jardim} & \textbf{Vila Olímpia} & \textbf{Berrini} & \textbf{Morumbi} \\
+		\hline
+		\endfirsthead
+		\multicolumn{6}{c}%
+		{\tablename\ \thetable\ -- \textit{Continuado da página anterior}} \\
+		\hline
+		\textbf{Média} & \textbf{Mooca} & \textbf{Ipiranga} & \textbf{Tamanduateí} \\
+		\hline
+		\endhead
+		\hline \multicolumn{6}{r}{\textit{Continua na próxima página}} \\
+		\endfoot
+		\hline
+		\endlastfoot
+		2011 & 18.564 & 16.871 & 25.963 & 20.225 & 20.691 \\
+		2012 & 16.363 & 16.891 & 31.733 & 22.893 & 23.105 \\
+		2013 & 16.340 & 16.599 & 30.718 & 25.133 & 26.369 \\
+		2014 & 16.507 & 15.639 & 32.192 & 25.361 & 28.463 \\
+		2015 & 15.872 & 14.820 & 31.130 & 24.238 & 28.048 \\
+	\end{longtable}
+\end{center}
+
+\begin{center}
+	\begin{tikzpicture}
+	\begin{axis}[
+	title=Evolução da demanda baseado em Mídia CPTM,
+	grid=both,
+	ymin=10000,
+	ymax=35000,
+	scaled ticks=false, tick label style={/pgf/number format/fixed},
+	x tick label style={/pgf/number format/1000 sep=},
+	y tick label style={/pgf/number format/.cd, set thousands separator={.}},
+	legend style={at={(0.5,-0.3)},anchor=north,legend columns=-1},
+	ylabel=Passageiros (MDU em milhares),
+	xlabel=Ano,
+	]
+	\addplot coordinates
+	{(2011,18564) (2012,16363) (2013,16340) (2014,16508) (2015,15873)};
+	\addlegendentry{Hebraica-Rebouças}
+	
+	\addplot coordinates
+	{(2011,16871) (2012,16892) (2013,16599) (2014,15640) (2015,14820)};
+	\addlegendentry{Cidade Jardim}	
+	
+	\addplot coordinates
+	{(2011,24327) (2012,25428) (2013,28169) (2014,28347) (2015,23545)};
+	\addlegendentry{Vila Olímpia}
+	
+	\addplot coordinates
+	{(2011,18968) (2012,19920) (2013,21281) (2014,21911) (2015,19048)};
+	\addlegendentry{Berrini}
+	
+	\addplot coordinates
+	{(2011,18918) (2012,20220) (2013,21527) (2014,22096) (2015,20696)};
+	\addlegendentry{Morumbi}
+	
+	\end{axis}
+	\end{tikzpicture}
+\end{center}
+
+\begin{obs}
+	Seção fortemente baseada em um trabalho de graduação de uma disciplina da Universidade Federal do ABC.
+\end{obs}
+
+\begin{info}
+	\infocaio{25/04/2016}{https://github.com/caiocco/ufabc-BH0301}
+\end{info}
 
 %----------------------------------------------------------------------------------------
 % 	BIBLIOGRAFIA
 %----------------------------------------------------------------------------------------
 
+\cleardoublepage
+\phantomsection
 \chapterimage{2019-02-09_tat_plataforma_l12} % Imagem do cabeçalho do capítulo
-\chapter*{Bibliografia}
+%\chapter*{Bibliografia}
 \addcontentsline{toc}{chapter}{\textcolor{red}{Bibliografia}}
-\section*{Livros}
-\addcontentsline{toc}{section}{Livros}
-\printbibliography[heading=bibempty,type=book]
-\section*{Artigos}
-\addcontentsline{toc}{section}{Artigos}
-\printbibliography[heading=bibempty,type=article]
+%\section*{Livros}
+%\addcontentsline{toc}{section}{Livros}
+%\printbibliography[heading=bibempty,type=Book]
+\printbibliography
 
 %----------------------------------------------------------------------------------------
 % 	ÍNDICE
@@ -518,6 +1384,26 @@ A Linha 10-Turquesa precisa de investimentos que não serão fáceis de serem co
 \addcontentsline{toc}{chapter}{\textcolor{red}{Índice Remissivo}}
 \sffamily
 \printindex
+
+%----------------------------------------------------------------------------------------
+% 	GLOSSÁRIO
+%----------------------------------------------------------------------------------------
+
+\renewcommand{\glossaryname}{Glossário}
+%\renewcommand{\glossarypreamble}{Esta é a descrição do glossário.\\ \\}
+\renewcommand*{\glsseeformat}[3][\seename]{\textit{#1}
+	\glsseelist{#2}}
+	
+\cleardoublepage
+\phantomsection
+\setlength{\columnsep}{0.75cm}
+\chapterimage{2016-11-04_interior_8500_l11} % Imagem do cabeçalho do capítulo
+\addcontentsline{toc}{chapter}{\textcolor{red}{\glossaryname}}
+\sffamily
+%\glossarystyle{index}
+%\glossarystyle{altlisthypergroup}
+\glossarystyle{tree}
+\printglossaries
 
 %----------------------------------------------------------------------------------------
 

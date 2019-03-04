@@ -1,0 +1,420 @@
+\ifglsentryexists{abl}{}%
+{%
+\gls@defglossaryentry{abl}%
+{%
+name={ABL},%
+sort={ABL},%
+type={main},%
+first={ABL},%
+firstplural={ABLs},%
+text={ABL},%
+plural={ABLs},%
+description={\'{A}rea Bruta Loc\'{a}vel},%
+descriptionplural={\'{A}rea Bruta Loc\'{a}vel},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{auj}{}%
+{%
+\gls@defglossaryentry{auj}%
+{%
+name={AUJ},%
+sort={AUJ},%
+type={main},%
+first={AUJ},%
+firstplural={AUJs},%
+text={AUJ},%
+plural={AUJs},%
+description={Aglomera\c {c}\~{a}o Urbana de Jundia\'{\i }},%
+descriptionplural={Aglomera\c {c}\~{a}o Urbana de Jundia\'{\i }},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{bbtt}{}%
+{%
+\gls@defglossaryentry{bbtt}%
+{%
+name={Benfica BBTT},%
+sort={Benfica BBTT},%
+type={main},%
+first={Benfica BBTT},%
+firstplural={Benfica BBTTs},%
+text={Benfica BBTT},%
+plural={Benfica BBTTs},%
+description={Benfica Barueri Transporte e Turismo Ltda},%
+descriptionplural={Benfica Barueri Transporte e Turismo Ltda},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{cptm}{}%
+{%
+\gls@defglossaryentry{cptm}%
+{%
+name={CPTM},%
+sort={CPTM},%
+type={main},%
+first={CPTM},%
+firstplural={CPTMs},%
+text={CPTM},%
+plural={CPTMs},%
+description={Companhia Paulista de Trens Metropolitanos},%
+descriptionplural={Companhia Paulista de Trens Metropolitanos},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{cmsp}{}%
+{%
+\gls@defglossaryentry{cmsp}%
+{%
+name={CMSP},%
+sort={CMSP},%
+type={main},%
+first={CMSP},%
+firstplural={CMSPs},%
+text={CMSP},%
+plural={CMSPs},%
+description={Companhia do Metropolitano de S\~{a}o Paulo},%
+descriptionplural={Companhia do Metropolitano de S\~{a}o Paulo},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{ett}{}%
+{%
+\gls@defglossaryentry{ett}%
+{%
+name={ETT},%
+sort={ETT},%
+type={main},%
+first={ETT},%
+firstplural={ETTs},%
+text={ETT},%
+plural={ETTs},%
+description={Empresa de Transportes e Turismo Carapicuíba},%
+descriptionplural={Empresa de Transportes e Turismo Carapicuíba},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{emtu}{}%
+{%
+\gls@defglossaryentry{emtu}%
+{%
+name={EMTU},%
+sort={EMTU},%
+type={main},%
+first={EMTU},%
+firstplural={EMTUs},%
+text={EMTU},%
+plural={EMTUs},%
+description={Empresa Metropolitana de Transportes Urbanos de S\~{a}o Paulo S.A},%
+descriptionplural={Empresa Metropolitana de Transportes Urbanos de S\~{a}o Paulo S.A},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{emplasa}{}%
+{%
+\gls@defglossaryentry{emplasa}%
+{%
+name={Emplasa},%
+sort={Emplasa},%
+type={main},%
+first={Emplasa},%
+firstplural={Emplasas},%
+text={Emplasa},%
+plural={Emplasas},%
+description={Empresa Paulista de Planejamento Metropolitano S/A},%
+descriptionplural={Empresa Paulista de Planejamento Metropolitano S/A},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{luos}{}%
+{%
+\gls@defglossaryentry{luos}%
+{%
+name={LUOS},%
+sort={LUOS},%
+type={main},%
+first={LUOS},%
+firstplural={LUOSs},%
+text={LUOS},%
+plural={LUOSs},%
+description={Lei de Uso de Ocupação do Solo},%
+descriptionplural={Lei de Uso de Ocupação do Solo},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{mdu}{}%
+{%
+\gls@defglossaryentry{mdu}%
+{%
+name={MDU},%
+sort={MDU},%
+type={main},%
+first={MDU},%
+firstplural={MDUs},%
+text={MDU},%
+plural={MDUs},%
+description={M\'{e}dia por Dia \'{U}til},%
+descriptionplural={M\'{e}dia por Dia \'{U}til},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{ouc}{}%
+{%
+\gls@defglossaryentry{ouc}%
+{%
+name={OUC},%
+sort={OUC},%
+type={main},%
+first={OUC},%
+firstplural={OUCs},%
+text={OUC},%
+plural={OUCs},%
+description={Operação Urbana Consorciada},%
+descriptionplural={Operação Urbana Consorciada},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{pl}{}%
+{%
+\gls@defglossaryentry{pl}%
+{%
+name={PL},%
+sort={PL},%
+type={main},%
+first={PL},%
+firstplural={PLs},%
+text={PL},%
+plural={PLs},%
+description={Projeto de Lei},%
+descriptionplural={Projeto de Lei},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{rmsp}{}%
+{%
+\gls@defglossaryentry{rmsp}%
+{%
+name={RMSP},%
+sort={RMSP},%
+type={main},%
+first={RMSP},%
+firstplural={RMSPs},%
+text={RMSP},%
+plural={RMSPs},%
+description={Regi\~{a}o Metropolitana de S\~{a}o Paulo},%
+descriptionplural={Regi\~{a}o Metropolitana de S\~{a}o Paulo},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{smdu}{}%
+{%
+\gls@defglossaryentry{smdu}%
+{%
+name={SMDU},%
+sort={SMDU},%
+type={main},%
+first={SMDU},%
+firstplural={SMDUs},%
+text={SMDU},%
+plural={SMDUs},%
+description={Secretaria Municipal de Desenvolvimento Urbano da Prefeitura de S\~{a}o Paulo},%
+descriptionplural={Secretaria Municipal de Desenvolvimento Urbano da Prefeitura de S\~{a}o Paulo},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
