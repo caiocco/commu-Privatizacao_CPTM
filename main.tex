@@ -49,6 +49,8 @@
 
 \newcommand{\infocaio}[2]{\textbf{Autor:} Caio C\'{e}sar C. Ortega \\ \textbf{Biografia:} aluno da Universidade Federal do ABC, cursa os bacharelados em Ci\^{e}ncias e Humanidades e em Planejamento Territorial. Morador da Zona Leste da capital. Possui cerca de dez anos de experi\^{e}ncia profissional em \textit{call} e \textit{contact center}, principalmente nas \'{a}reas de atendimento, planejamento e MIS. Ajudou a idealizar e iniciar o COMMU em 2014 \\ \textbf{Originalmente publicado em:} {#1} \\ \textbf{Endere\c{c}o do original:} \url{{#2}}}
 
+\newcommand{\infoedu}[2]{\textbf{Autor:} Eduardo Ganan\c{c}a \\ \textbf{Biografia:} arquiteto e urbanista pela Faculdade de Arquitetura e Urbanismo da Universidade de S\~{a}o Paulo \\ \textbf{Originalmente publicado em:} {#1} \\ \textbf{Endere\c{c}o do original:} \url{{#2}}}
+
 \usepackage{glossaries}
 \makeglossaries
 
@@ -78,6 +80,11 @@
 	description={Companhia do Metropolitano de S\~{a}o Paulo}
 }
 
+\newglossaryentry{efs}{
+	name={EFS},
+	description={Estrada de Ferro Sorocabana}
+}
+
 \newglossaryentry{ett}{
 	name={ETT},
 	description={Empresa de Transportes e Turismo Carapicu\'{\i}ba}
@@ -91,6 +98,11 @@
 \newglossaryentry{emplasa}{
 	name={Emplasa},
 	description={Empresa Paulista de Planejamento Metropolitano S/A}
+}
+
+\newglossaryentry{fepasa}{
+	name={FEPASA},
+	description={Ferrovia Paulista S/A}
 }
 
 \newglossaryentry{luos}{
@@ -233,7 +245,7 @@ Convenciona-se ainda a adoção de marcações especiais ao longo do livro, que 
 \section{Surgimento da \gls{cptm}}
 
 A \glsdesc*{cptm} é uma empresa estatal de economia mista, ligada à Secretaria dos Transportes Metropolitanos do Governo de Estado de São Paulo, criada em 28 de maio de 1992 por força da Lei Estadual nº 7.861, conforme \cite{sitecptm1}, podendo seu papel pode ser entendido no artigo 4º da mesma lei:
-	
+
 \begin{citacao}
 	Artigo 4º -- A \gls{cptm} terá por objeto:\\
 	I -- planejamento, estudo, projeto, construção, implantação, exploração e manutenção das obras e serviços de transporte de passageiros, sobre trilhos ou guiados, nas entidades regionais do Estado de São Paulo;\\
@@ -244,8 +256,8 @@ A \glsdesc*{cptm} é uma empresa estatal de economia mista, ligada à Secretaria
 	VI -- comercialização de tecnologia, direta ou indiretamente, em sociedades ou em consórcios; prestação de serviços de consultoria, gerenciamento e apoio técnico; prestação de serviços de operação e manutenção de equipamentos; construção e implantação de sistemas de transporte e terminais de passageiros, no País ou no exterior; e\\
 	VII -- edição de jornais, revistas e outras publicações de caráter técnico ou comercial.\cite{lei7861}
 \end{citacao}
-	
-Segundo \cite[p. 236]{Stefani}, ``a formação da \gls{cptm} tornou-se oficial após aprovação na Assembléia Geral da	Constituição, realizada em 02.07.1993, tendo como acionistas a Fepasa e a Companhia Metropolitana de Transportes Coletivos – CMTC''
+
+Segundo \cite[p. 236]{Stefani}, ``a formação da \gls{cptm} tornou-se oficial após aprovação na Assembléia Geral da Constituição, realizada em 02.07.1993, tendo como acionistas a Fepasa e a Companhia Metropolitana de Transportes Coletivos – CMTC''
 
 Ainda, \cite[p. 42]{Isoda} discorre sobre a questão dos critérios para contagem da quilometragem da rede, sendo oportuno observar o comparativo feito por ele na \autoref{tab:isoda_km}:
 
@@ -254,7 +266,7 @@ Ainda, \cite[p. 42]{Isoda} discorre sobre a questão dos critérios para contage
 \end{citacao}
 
 \begin{table}[h]
-	\caption{Quilometragem de rede por habitante (regiões metropolitanas). Fonte: \cite[p. 58]{Isoda}}
+	\caption{Quilometragem de rede por habitante. Fonte: \cite[p. 58]{Isoda}}
 	\includegraphics[keepaspectratio,width=\textwidth]{img_isoda_km_rede.png}
 	\label{tab:isoda_km}
 \end{table}
@@ -262,12 +274,91 @@ Ainda, \cite[p. 42]{Isoda} discorre sobre a questão dos critérios para contage
 Assim como a criação da companhia, a operação de seis das sete linhas, nas quais todas exceto a 13-Jade são fruto de herança de estatais que pré-dataram a criação da {\glsdesc*{cptm}}, tem seu amparo por meio da Lei 7.861 de 1992, que retomo com o Art. 12:
 
 \begin{citacao}
-	Artigo 12 --- A \gls{cptm} deverá assumir os sistemas de trens urbanos da Região Metropolitana de São Paulo, operados pela Companhia Brasileira de Trens Urbanos - CBTU e pela Ferrovia Paulista S/A - FEPASA, de forma a assegurar a continuidade e a melhoria dos serviços, para isso podendo efetuar os necessários acordos operacionais.\\
+	Artigo 12 --- A \gls{cptm} deverá assumir os sistemas de trens urbanos da Região Metropolitana de São Paulo, operados pela Companhia Brasileira de Trens Urbanos - CBTU e pela \glsdesc{fepasa} - \gls{fepasa}, de forma a assegurar a continuidade e a melhoria dos serviços, para isso podendo efetuar os necessários acordos operacionais.\\
 	Parágrafo único --- Para o cumprimento do disposto neste artigo, a \gls{cptm} poderá celebrar contratos de prestação de serviços, gerenciamento de bens, ou quaisquer serviços de transporte de passageiros sobre trilhos ou guiados, de outras empresas ligadas ao sistema de transporte de passageiros na Região Metropolitana de São Paulo.\cite{lei7861}
 \end{citacao}
 
-Como explica \cite[pág. 30]{Isoda} em relação às redes conceituadas como metrô e surgidas em meados do século XIX, estas malhas ``Não se diferenciavam tecnológica e operacionalmente das estradas de ferro  existentes,  com  grande  número  de  ramais  e  trechos  de  via compartilhada. Eram linhas independentes, de companhias diversas, e muitas  vezes  buscavam  apenas  conectar  estações  terminais  centrais das ferrovias que não conseguiam penetrar nos centros antigos'', também segundo ele, é a partir daí que que os serviços suburbanos existentes começam a ser dinamizados em novas redes, que são ``impulsionadas  pela  necessidade  de  aumentar  o  rendimento  dos serviços  suburbanos  existentes.  As  principais  medidas  neste  sentido foram  a  segregação  das  linhas,  duplicando  o  número  de  vias  para separar serviços suburbanos dos serviços de longa distância e  cargas; construção  de  interligações  centrais,  em  túnel  ou  elevado, “amarrando” linhas que terminavam no centro; e construção de novas linhas. Estas medidas levam para a configuração de uma rede própria de trens urbanos de passageiros, tornando-a próxima de uma rede de metrô'' (\cite[pág. 32]{Isoda}).
-	
+Como explica \cite[pág. 30]{Isoda} em relação às redes conceituadas como metrô e surgidas em meados do século XIX, estas malhas ``Não se diferenciavam tecnológica e operacionalmente das estradas de ferro  existentes,  com  grande  número  de  ramais  e  trechos  de  via compartilhada. Eram linhas independentes, de companhias diversas, e muitas  vezes  buscavam  apenas  conectar  estações  terminais  centrais das ferrovias que não conseguiam penetrar nos centros antigos'', também segundo ele, é a partir daí que que os serviços suburbanos existentes começam a ser dinamizados em novas redes, que são ``impulsionadas  pela  necessidade  de  aumentar  o  rendimento  dos serviços  suburbanos  existentes.  As  principais  medidas  neste  sentido foram  a  segregação  das  linhas,  duplicando  o  número  de  vias  para separar serviços suburbanos dos serviços de longa distância e  cargas; construção  de  interligações  centrais,  em  túnel  ou  elevado, “amarrando” linhas que terminavam no centro; e construção de novas linhas. Estas medidas levam para a configuração de uma rede própria de trens urbanos de passageiros, tornando-a próxima de uma rede de metrô''\cite[pág. 32]{Isoda}.
+
+% 	EDUARDO: RESSALVA CONCEITUAL
+
+A conceituação de \enquote{metrô}, até os dias atuais, é polêmica, exatamente por sua semelhança com o sistema ferroviário que o originou. Segundo Fernando MacDowell, livre-docente da UFRJ (Universidade Federal do Rio de Janeiro), um dos responsáveis pela implementação do MetrôRio, na década de 1970, metrô mesmo, no Brasil, só existe em São Paulo, Rio e Distrito Federal. Entre os critérios que adota, estão a presença de tração em todos os carros, o grau de inclinação que o trem pode encarar (até 2,5\% no caso de trens urbanos e até 4\% nos metrôs) e a voltagem elétrica utilizada. Os outros seriam \enquote{trens com operação metroviária} - caso, também, da \gls{cptm}*.
+
+% TODO corrigir citação
+*Citar: Haroldo Ceravolo Sereza, \enquote{Conceito} de metrô divide especialistas e operadores, UOL Notícias, 29/07/2009, disponível em https://noticias.uol.com.br/especiais/metro/2009/07/29/ult7902u3.jhtm 
+
+Ora, tais critérios são absolutamente arbitrários e deixam de fora várias das linhas de sistemas paradigmáticos, como Londres e Paris. Em termos práticos, não existe um recorte possível que não apresente mais exceções do que regras.
+
+Considerando que: 1. A Operação da \gls{cptm} é feita por intervalos regulares, variando de acordo com o dia e horário (em contraposição à publicação de uma tabela de horários), 2. A Integração física e tarifária entre as linhas da \gls{cptm} (salvo serviços especiais) e entre estas e as linhas das outras operadoras é livre, total e permanente e 3. Tal qual as demais operadoras, as plataformas e vias são dedicadas a um único serviço cada, sem compartilhamento (salvo serviços especiais), podemos dizer que, em termos de experiência do usuário no sistema, a \gls{cptm} já opera como \enquote{metrô}. Este caráter de operação metroviária já havia sido trazido às linhas herdadas pela \gls{cptm} da \gls{fepasa}, enquanto as linhas herdadas da CBTU se aproximavam mais do paradigma do \enquote{trem de subúrbio}.
+
+%	EDUARDO: DESCRIÇÃO DAS LINHAS E OPERADORES ANTERIORES
+
+O entendimento da herança das operadoras anteriores é uma peça chave para a compreensão de problemas atuais da Companhia. Antes de serem unificadas, as seis linhas eram divididas em três \enquote{pares} de linhas, que têm origens diferentes e características próprias. 
+
+As atuais linhas 08-Diamante e 09-Esmeralda são o antigo Metropolitano da FEPASA e eram denominados, respectivamente, Linha Oeste e Linha Sul. Foram construídas pela antiga Estrada de Ferro Sorocabana em bitola estreita, a linha oeste (Tronco) em 1870 e a linha sul (Ramal de Jurubatuba) na década de 1950. O papel dessas vias era a movimentação de cargas relativas à agricultura e à indústria. Na década de 1950, as linhas foram modernizadas para a operação do trem de subúrbio elétrico, com paradas rudimentares e ainda em bitola métrica.
+
+%	FOTO: TOSHIBA
+
+A \gls{efs}, que já estava sob controle do Estado de São Paulo desde 1919, foi incorporada à \glsdesc{fepasa} (\gls{fepasa}) quando da sua criação, em 1971. Nos anos seguintes, houve um movimento de modernização de toda a malha ferroviária sob controle da FEPASA, como a construção de novos trechos para carga no interior (\enquote{Corredor de Exportação}), o investimento em infraestrutura e material rodante para tração elétrica de serviços cargueiros (no contexto da crise do petróleo) e a transformação completa do serviço de subúrbios da capital em metropolitano.
+
+Assim, até 1979, foram completamente reconstruídas as agora denominadas linhas Oeste, de Júlio Prestes até Itapevi e Sul, de Osasco até Jurubatuba, com a troca de bitola nas vias para 1,60m (mantendo o trilho para a passagem de cargueiros de bitola 1,00m), a reconstrução de todas as atuais estações da linha Oeste e mais 5 estações na linha Sul e a aquisição da frota de trens Série 5000, bastante numerosa e de características comparáveis às dos trens do Metrô, que até então operava somente a atual Linha 1-Azul.
+
+%	FOTO: PROPAGANDA DA FEPASA
+
+Quando a \gls{cptm} assume a operação, o \enquote{par de linhas} ex-FEPASA era o mais moderno da sua rede, ainda que a operação tenha se degradado entre 1979 e 1992, eram as únicas linhas com operação por meio de intervalos regulares, estações padronizadas e bilhetagem magnética.
+
+As atuais linhas 07-Rubi e 10-Turquesa, por sua vez, faziam parte do serviço de subúrbios da Estrada de Ferro Santos-Jundiaí, operado pela CBTU. Essa ferrovia foi a primeira do estado, sendo inaugurada em 1867, e tendo como principais funções o escoamento da produção de café do interior paulista e a entrada da mão de obra imigrante chegada ao Porto de Santos. Durante sua concessão à empresa de capital inglês \enquote{The São Paulo Railway Company, Limited}, de sua construção até 1946, ela recebeu investimentos em duplicação, reconstrução de estações (incluindo as atuais tombadas por órgãos de preservação do patrimônio, como a Estação Luz) e aquisição de material rodante. Contudo, somente na década de 1950, após ser estatizada e receber a denominação oficial (EFSJ) e posteriormente ser incorporada à Rede Ferroviária Federal S/A (RFFSA), é que recebeu modernização mais substancial. Toda a linha foi eletrificada, passagens em nível foram suprimidas, novo material rodante foi adquirido (os primeiros Trens-Unidade-Elétricos em aço inoxidável do país, fabricados pela célebre The Budd Company) e foram reconstruídas as estações entre Mauá e Pirituba, com a adição de uma terceira via neste trecho.
+
+%	FOTO: SPR
+
+Contudo, após esse processo, que durou até o início da década de 1970, minguaram os investimentos nas linhas sob controle federal, ficando a EFSJ carente de outras melhorias, como modernização na operação, bilhetagem e material rodante - mesmo com a criação da Companhia Brasileira de Trens Urbanos (CBTU), que assumiu as linhas de trens urbanos em todo o país e ainda opera os sistemas de cidades como Belo Horizonte, Recife e Fortaleza. 
+
+%	FOTO: EFSJ
+
+Quando a \gls{cptm} herdou a operação, o cenário era de degradação, contudo não tão grave quanto as linhas originadas pela Estrada de Ferro Central do Brasil.
+
+Essas linhas são as atuais 11-Coral e 12-Safira da \gls{cptm}. Sua construção se deu na década de 1890, como \enquote{Estrada de Ferro do Norte}, depois \enquote{Estrada de Ferro São Paulo e Rio de Janeiro}, e finalmente \enquote{Ramal de São Paulo da Estrada de Ferro Central do Brasil}. A motivação de sua construção era oferecer uma ligação regular e confiável, por terra, entre São Paulo e Rio de Janeiro. Até então, a viagem mais rápida entre as duas cidades era via marítima, por Santos. A ligação expressa, que percorria os 499km entre a Estação Roosevelt (Brás) e Pedro II (Central) era denominada Expresso Cruzeiro do Sul, e era complementado por serviços de subúrbio em seus extremos paulista e fluminense, com conexão aos serviços das estradas de ferro Santos-Jundiaí e Leopoldina.
+
+%	FOTO: PROPAGANDA DO CRUZEIRO DO SUL
+
+Por conta das fortes rampas da linha de São Paulo e de conflitos com a ocupação lindeira que se adensava, foi construída na década de 1930 uma linha variante entre Poá e São Paulo, a Variante de Poá (atual linha 12-Safira). Esta linha aproveia o que até então era o limite da várzea do Rio Tietê, para alcançar um gradiente mais suave, acompanhando o vale, e uma inserção menos complicada, aproveitando uma barreira natural do território.
+
+Sendo estatal desde a sua encampação pela EFCB, ainda no Século XIX, o Ramal de São Paulo integrou junto com esta a formação da RFFSA em 1957. Contudo, os esforços de modernização desta ferrovia contemplavam de forma desigual o lado fluminense, tendo tanto a compra de material rodante, quanto a eletrificação, ocorrido primeiro no Rio de Janeiro, e ao lado paulista somente na década de 1960.
+
+%	FOTO: SUURBIO A VAPOR EM ITAIM PAULISTA NA DÉCADA DE 1960
+
+Apesar da reconstrução de algumas estações e da adição de estações novas, pouco foi feito após esse período, entrando as duas linhas em franca degradação no fim de seu período RFFSA e em todo o seu período CBTU. Foi o par de linhas em situação mais caótica e precária a ser assumido pela \gls{cptm}.
+
+%	FOTO: GENTE PENDURADA NO TREM
+
+%	EDUARDO: ESFORÇOS DE INTEGRAÇÃO FEITOS PELA \gls{cptm}
+
+A transferência efetiva da operação da CBTU para a \gls{cptm} se deu em 1994, e da FEPASA em 1996. A essa altura, além da situação apresentada anteriormente, havia alguns pontos de contato, ainda precários entre as ferrovias existentes e entre estas e o Metrô. As estações Barra Funda e Tatuapé, por exemplo, construídas pelo Metrô, eram pontos de conexão externos ao centro da cidade, que tinham a função de \enquote{chegada} e distribuição dos usuários, eram os dois melhores centros de conexão entre os sistemas. Contudo, não havia integração tarifária entre as três empresas. Já as estações Brás, Luz e Júlio Prestes, que sempre foram as estações \enquote{centrais} de cada uma das ferrovias na cidade, não apresentavam características físicas favoráveis à integração entre os serviços e em relação ao Metrô. Voltando às origens dos sistemas metroviários europeus, essa situação era análoga ao estágio intermediário entre a operação de vias férreas por várias empresas, de forma desconexa, e a eventual organização num sistema coeso.
+
+A partir de 1998 foram feitos pesados investimentos na atual linha 11-Coral, com a criação do Expresso Leste, através da construção de um novo trecho de linha, entre Artur Alvim e Guaianazes, realizada pelo Metrô e transferido à \gls{cptm} e na aquisição dos trens da série 2000, os primeiros adquiridos pela \gls{cptm}. Foram desativadas, assim, todas as estações da linha 11-Coral redundantes à linha 03-Vermelha do Metrô, que compreende todo o trecho Brás-Itaquera (exceto Tatuapé), para que a primeira cumpra uma função expressa.
+
+%	FOTO: 2000 NOVINHO
+
+Na atual linha 9-Esmeralda, foram construídas todas as estações no trecho entre Pinheiros e Jurubatuba, exceto Santo Amaro, e foram adquiridos os trens da série 2100, usados e reformados, para operação nesta linha e na linha 10-Turquesa, que compreende o trecho Luz-Rio Grande da Serra da antiga EFSJ. Também pela primeira vez, a \gls{cptm} investiu na reforma completa de uma série herdada, a dos antigos trens da EFSJ, que se tornaram a série 1100.
+
+%	FOTO: LINHA 9 NOS ANOS 2000
+
+Já na região central, houve investimentos na reforma das estações Brás e Luz, com a melhora na conexão entre as linhas e destas com as do Metrô. Foram adquiridos os trens da série 3000, que serviram o trecho Brás-Barra Funda durante a reforma da Estação Luz e posteriormente foram transferidos para a atual linha 09-Esmeralda. Houve planos de conectar todas as 4 linhas da \gls{cptm} que chegavam ao centro, através do compartilhamento de vias, no chamado Projeto Integração Centro - contudo, não foi levado a cabo por implicar em comprometimento na oferta fora da região central. Ao fim dessas reformas, a \gls{cptm} passou a adotar a integração físico-tarifária total em relação ao Metrô e, portanto, igualar a sua tarifa à do Metrô. 
+
+%	FOTO: BRÁS OU LUZ EM REFORMA
+
+Na segunda metade da primeira década dos anos 2000, foram reconstruídas todas as estações da atual linha 12-Safira, exceto Engenheiro Goulart e São Miguel Paulista e todas as séries dos trens ex-CBTU passaram por programas de reforma e modernização. Também houve significativo salto de conforto e segurança nas viagens, com a queda na evasão de renda, nas ocorrências de delitos e na extinção de viagens com trens com as portas abertas, de \enquote{pingentes e de surfistas}. Na atual linha 09-Esmeralda foi reconstruído o trecho Jurubatuba-Grajaú e para ela foram adquiridos os trens da série 2000 Fase II.
+
+Por fim, a década de 2010 marcou a integração definitiva entre os serviços da \gls{cptm} e do Metrô com as conexões às linhas 02-Verde e 04-Amarela em Tamanduateí e Pinheiros, bem como com a conclusão da Linha 5-Lilás, que é conectada à \gls{cptm} na Estação Santo Amaro. Também marcaram esse período a aquisição massiva de novo material rodante (séries 7000, 7500, 8000, 8500, 9000 e 9500, totalizando mais de cem composições - que são compatíveis com todas as linhas da Companhia), a reconstrução do trecho Itapevi-Amador Bueno da linha 08-Diamante, abolindo definitivamente a operação dos trens de bitola métrica ex-Sorocabana, e a construção da primeira linha totalmente nova da \gls{cptm}, a linha 13-Jade e por fim a aposentadoria de praticamente todo o material rodante herdado das antigas companhias originárias da \gls{cptm}.
+
+%	FOTO: TREM NOVO EM ESTAÇÃO NOVA
+
+\begin{info}
+	\infoedu{N/A}{-}
+	\\
+	\infocaio{N/A}{-}
+\end{info}
+
 \section{Evolução da demanda de passageiros}\label{ss:demanda}
 
 Para \cite[p. 16]{Ferreira} a presença da \gls{cptm} é marcante no território, com resultados entusiasmantes após mais de uma década de investimentos, além disso, destaca que a \gls{cptm} serve 19 municípios na \gls{rmsp} (incluindo a capital paulista) e outros 3 fora dela (na \gls{auj}). Neste sentido, a presença da \gls{cptm} é sinônimo de presença do Trem Metropolitano, assim sendo, com base em \cite{Ferreira}[pág. 15, nota de rodapé 1], elaboro a seguinte tabela com os municípios atendidos:
@@ -320,10 +411,10 @@ Para \cite[p. 16]{Ferreira} a presença da \gls{cptm} é marcante no território
 		Linha 12-Safira & Itaquaquecetuba & \gls{rmsp} \\
 		Linha 13-Jade & São Paulo & \gls{rmsp} \\
 		Linha 13-Jade & Guarulhos & \gls{rmsp} \\
-		\end{longtable}
+	\end{longtable}
 \end{center}	
 
-A \autoref{fig:demanda} apresenta um gráfico de demanda\footnote{Ver \gls{mdu}.} das seis linhas da empresa. Somadas, elas transportam mais de 2 milhões de passageiros. É oportuno salientar que a dissociação da rede da \gls{cptm} do território, acaba por eliminar um elemento estruturante importante, agravando o quadro de escassez de linhas por habitante, ao invés de induzir mudanças positivas, contudo, vale notar o papel difuso da \gls{cptm} apontado por \cite[p. 122]{Isoda}: 
+A \autoref{fig:demanda} apresenta um gráfico de demanda\footnote{Ver \gls{mdu}.} das seis linhas da empresa. Somadas, as linhas transportam mais de 2 milhões de passageiros. É oportuno salientar que a dissociação da rede da \gls{cptm} do território, acaba por eliminar um elemento estruturante importante, agravando o quadro de escassez de linhas por habitante, ao invés de induzir mudanças positivas, contudo, vale notar o papel difuso da \gls{cptm} apontado por \cite[p. 122]{Isoda}: 
 
 \begin{citacao}
 	(...) a \gls{cptm} tem hesitado em definir quais os seus papéis no transporte metropolitano, abarcando simultaneamente as escalas metropolitana, regional, e central-metropolitana (em grande parte por omissão da \gls{cmsp}).
@@ -455,7 +546,9 @@ Os maiores bicicletários da \gls{cptm} contam com 576 e 480 vagas, localizados 
 
 \subsection{Paralelismo em alguns trajetos}
 
-O passado das antigas ferrovias favorecem a \gls{cptm} e quase chega a ser uma covardia comparar, no entanto, como o sistema da Companhia do Metropolitano é bem mais recente e não precisou de um processo intenso de modernização (uma verdadeira reconstrução, dependendo do caso), não há qualquer razão para ignorar fatos. A estrutura do trecho Tatuapé-Lapa possibilita uma série de estratégias em situações específicas (como greves), além de garantir algum grau de paralelismo. Chegamos a destacar características do trecho em nosso artigo sobre o tema "metrô 24 horas", não deixe de conferi-lo.
+% TODO ver o que fazer com o artigo do metrô 24 horas
+
+O passado das antigas ferrovias favorecem a \gls{cptm} e quase chega a ser uma covardia comparar, no entanto, como o sistema da Companhia do Metropolitano é bem mais recente e não precisou de um processo intenso de modernização (uma verdadeira reconstrução, dependendo do caso), não há qualquer razão para ignorar fatos. A estrutura do trecho Tatuapé-Lapa possibilita uma série de estratégias em situações específicas (como greves), além de garantir algum grau de paralelismo. Chegamos a destacar características do trecho em nosso artigo sobre o tema \enquote{metrô 24 horas}, não deixe de conferi-lo.
 
 Por exemplo, partindo da Estação Tatuapé, é possível chegar na Estação Brás com as linhas 11-Coral (Luz-Guaianazes-Estudantes) e 12-Safira (Brás-Calmon Viana), ainda, a Estação Barra Funda pode ser acessada diretamente da zona central por meio de duas estações: Luz e Júlio Prestes, usando as linhas 7-Rubi (Luz-Francisco Morato-Jundiaí) e 8-Diamante (Júlio Prestes-Itapevi-Amador Bueno), respectivamente. Adicionalmente, a presença de duas estações Lapa, com as linhas 7 e 8 correndo paralelas até aquela altura, adiciona mais um exemplo de paralelismo.
 
@@ -649,7 +742,7 @@ Se observarmos os dados de demanda atuais fornecidos pela \gls{cptm} e apresenta
 		(11 (2019),724.400)};
 	\end{axis}
 	\end{tikzpicture}
-	\label{fig:demanda}
+	\label{fig:demanda2}
 \end{figure}
 
 \begin{landscape}
@@ -1321,27 +1414,27 @@ Utilizar artigo do Expresso ABC. Talvez mesclar com um ou outro artigo que detal
 \end{figure}
 \end{landscape}
 
-\cite[pág. 201]{Frugoli} destaca a pressão e o desejo de um ator ligado à iniciativa privada com relação à Linha 9, ainda antes do término de sua dinamização, que resultou, sobretudo, na construção e inauguração das estações Hebraica-Rebouças, Cidade Jardim, Berrini, Morumbi, Granja Julieta, Socorro e Vila Olímpia\cite[pág. 38]{Ferreira}: ``"\textemdash\ A linha de metrô está pronta. Está aí no Rio Pinheiros, a linha de trem. Não sei por que, até agora, as nossas "autoridades"\dots Eu acho que os caras não têm visão nenhuma, é uma coisa impressionante. É só fazer algumas estações e está pronta. Não, eles vão fazer, mas só quando fizerem a da Rebouças. Faz já! (Entrevista com Carlos Bratke, cit.)''.
+\cite[pág. 201]{Frugoli} destaca a pressão e o desejo de um ator ligado à iniciativa privada com relação à Linha 9, ainda antes do término de sua dinamização, que resultou, sobretudo, na construção e inauguração das estações Hebraica-Rebouças, Cidade Jardim, Berrini, Morumbi, Granja Julieta, Socorro e Vila Olímpia\cite[pág. 38]{Ferreira}: ``\textemdash\ A linha de metrô está pronta. Está aí no Rio Pinheiros, a linha de trem. Não sei por que, até agora, as nossas autoridades\dots Eu acho que os caras não têm visão nenhuma, é uma coisa impressionante. É só fazer algumas estações e está pronta. Não, eles vão fazer, mas só quando fizerem a da Rebouças. Faz já!'' (Entrevista com Carlos Bratke, cit.).
 
 Carlos Bratke, como explica \cite{Frugoli}. exibe perfeitamente os efeitos descritos por \cite{Acselrad}. criticando o poder público, ao mesmo tempo que também demonstra que não era incomodado pela prefeitura ou pelo governo estadual, atuando livremente na Avenida Engenheiro Luís Carlos Berrini:
 
 \begin{citacao}
-	As declarações dos irmãos Bratke e matérias da grande imprensa ao longo das últimas décadas ajudam a tecer um quadro que frisa um caráter de "pioneirismo" e "autonomia" quanto ao poder público:
+	As declarações dos irmãos Bratke e matérias da grande imprensa ao longo das últimas décadas ajudam a tecer um quadro que frisa um caráter de \enquote{pioneirismo e autonomia} quanto ao poder público:
 	
 	\begin{citacao}
 		No espaço de dez anos, [Carlos Bratke, Roberto Bratke e Francisco Collet] operaram em volta da Avenida Luiz Carlos Berrini, sem a mais remota interferência da prefeitura ou de qualquer poder público, uma pequena revolução urbana \textemdash\ a mais notável já feita num grande espaço da cidade por um único projeto privado de arquitetura. (Veja SP, 1985:16)
 	\end{citacao}
 	
-	Na mesma matéria, Carlos Bratke afirma: "Nunca fui procurado por nenhum órgão público para saber quais são os meus planos" (Veja SP, 1985:21).
+	Na mesma matéria, Carlos Bratke afirma: \enquote{Nunca fui procurado por nenhum órgão público para saber quais são os meus planos} (Veja SP, 1985:21).
 	
 	\begin{citacao}		
-		"Essa avenida não é um planejamento urbano. Precisavam fazer um canal, então fizeram essa avenida que ligava nada a coisa nenhuma [\dots] Nessa avenida era tudo abandonado, um brejo. Saímos de pastinha na mão, visitando os amigos e convencendo-os a aplicarem o dinheiro no nosso projeto. Falamos com mais de 200 pessoas e tomei muito chá de cadeira que conseguimos construir o primeiro prédio comercial. Arborizamos a região e valorizamos o metro quadrado de 200 para 5 mil dólares. Já fizemos 30. Estamos fazendo mais trinta. (apud Gabaglia, 1990:s.p.)
+		Essa avenida não é um planejamento urbano. Precisavam fazer um canal, então fizeram essa avenida que ligava nada a coisa nenhuma [\dots] Nessa avenida era tudo abandonado, um brejo. Saímos de pastinha na mão, visitando os amigos e convencendo-os a aplicarem o dinheiro no nosso projeto. Falamos com mais de 200 pessoas e tomei muito chá de cadeira que conseguimos construir o primeiro prédio comercial. Arborizamos a região e valorizamos o metro quadrado de 200 para 5 mil dólares. Já fizemos 30. Estamos fazendo mais trinta. (apud Gabaglia, 1990:s.p.)
 	\end{citacao}
 	
 	Outras críticas ao poder público foram coletadas na entrevista que concedeu:
 	
 	\begin{citacao}
-		\textemdash\ Eu acho que a cidade de São Paulo está constituindo espontaneamente o que os administradores já deviam ter feito há muito tempo: dividir a cidade em vários pólos! [\dots] O zoneamento aqui[região da Berrini] é a coisa mais absurda, anacrônica e idiota que pode existir, mas está acontecendo praticamente numa outra regulamentação. Infelizmente, porque o zoneamento, que já nasceu errado, acabou indo parar nas mãos dos vereadores e não de uma comissão técnica de revisão, nunca foi revisto de uma maneira global, e tem sido alterado ao sabor dos interesses "políticos" dos vereadores. (Entrevista com Carlos Bratke, cit.)
+		\textemdash\ Eu acho que a cidade de São Paulo está constituindo espontaneamente o que os administradores já deviam ter feito há muito tempo: dividir a cidade em vários pólos! [\dots] O zoneamento aqui[região da Berrini] é a coisa mais absurda, anacrônica e idiota que pode existir, mas está acontecendo praticamente numa outra regulamentação. Infelizmente, porque o zoneamento, que já nasceu errado, acabou indo parar nas mãos dos vereadores e não de uma comissão técnica de revisão, nunca foi revisto de uma maneira global, e tem sido alterado ao sabor dos interesses \enquote{políticos} dos vereadores. (Entrevista com Carlos Bratke, cit.)
 	\end{citacao}	
 \end{citacao}
 
